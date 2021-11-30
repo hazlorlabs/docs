@@ -127,7 +127,7 @@ $light-color = rgba(255, 255, 255, 50%)
   min-height: $footerHeight;
   // width: 100%;
   padding: 28px 15px;
-  background-color: #0b1426;
+  background-color: #050b17;
 
   .wrapper {
     max-width $MQWide

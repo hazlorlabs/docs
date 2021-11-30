@@ -101,7 +101,7 @@ $navbar-vertical-padding = 0.7rem
 $navbar-horizontal-padding = 1.5rem
 
 $headerTextColor = #f7f9fa
-$searchBoxInputColor = #0b1426
+$searchBoxInputColor = #050b17
 
 .navbar
   padding $navbar-vertical-padding $navbar-horizontal-padding

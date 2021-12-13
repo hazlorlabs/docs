@@ -51,7 +51,7 @@ $ hazlord -h
 
 ### Config and data directory
 
-By default, your config and data are stored in the folder located at the `~/.cronos` directory.
+By default, your config and data are stored in the folder located at the `~/.hazlor` directory.
 
 Make sure you have backed up your wallet storage after creating the wallet or else your funds may be inaccessible in case of accident forever.
 
@@ -131,7 +131,7 @@ A list of commonly used flags of hazlord is listed below:
 
 | Option              | Description                   | Type         | Default Value   |
 | ------------------- | ----------------------------- | ------------ | --------------- |
-| `--home`            | Directory for config and data | string       | `~/.cronos` |
+| `--home`            | Directory for config and data | string       | `~/.hazlor` |
 | `--chain-id`        | Full Chain ID                 | String       | ---             |
 | `--output`          | Output format                 | string       | "text"          |
 | `--keyring-backend` | Select keyring's backend      | os/file/test | os              |
@@ -170,7 +170,7 @@ Flags:
 
 Global Flags:
       --chain-id string     The network chain ID
-      --home string         directory for config and data (default "/Users/.cronos")
+      --home string         directory for config and data (default "/Users/.hazlor")
       --log_format string   The logging format (json|plain) (default "plain")
       --log_level string    The logging level (trace|debug|info|warn|error|fatal|panic) (default "info")
       --trace

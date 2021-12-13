@@ -115,7 +115,7 @@ To simplify the following step, we will be using **Linux** (Intel x86) for illus
 
   ```bash
 
-  $ rm ~/.cronos/config/genesis.json
+  $ rm ~/.hazlor/config/genesis.json
 
   ```
 
@@ -145,7 +145,7 @@ Before kick-starting your node, we will have to configure your node so that it c
 
   ::: tip NOTE
 
-  - Depending on your hazlord home setting, the hazlord configuration will be initialized to that home directory. To simply the following steps, we will use the default hazlord home directory `~/.cronos/` for illustration.
+  - Depending on your hazlord home setting, the hazlord configuration will be initialized to that home directory. To simply the following steps, we will use the default hazlord home directory `~/.hazlor/` for illustration.
 
   - You can also put the `hazlord` to your binary path and run it by `hazlord`
 
@@ -157,7 +157,7 @@ Before kick-starting your node, we will have to configure your node so that it c
 
   ```bash
 
-  $ curl https://raw.githubusercontent.com/hazlorlabs/core-mainnet/master/cronosmainnet_25-1/genesis.json > ~/.cronos/config/genesis.json
+  $ curl https://raw.githubusercontent.com/hazlorlabs/core-mainnet/master/cronosmainnet_25-1/genesis.json > ~/.hazlor/config/genesis.json
 
   ```
 
@@ -165,7 +165,7 @@ Before kick-starting your node, we will have to configure your node so that it c
 
   ```bash
 
-  $ if [[ $(sha256sum ~/.cronos/config/genesis.json | awk '{print $1}') = "58f17545056267f57a2d95f4c9c00ac1d689a580e220c5d4de96570fbbc832e1" ]]; then echo "OK"; else echo "MISMATCHED"; fi;
+  $ if [[ $(sha256sum ~/.hazlor/config/genesis.json | awk '{print $1}') = "58f17545056267f57a2d95f4c9c00ac1d689a580e220c5d4de96570fbbc832e1" ]]; then echo "OK"; else echo "MISMATCHED"; fi;
 
 
 
@@ -185,23 +185,23 @@ Before kick-starting your node, we will have to configure your node so that it c
 
     :::
 
-- In `~/.cronos/config/app.toml`, update minimum gas price to avoid [transaction spamming](https://github.com/cosmos/cosmos-sdk/issues/4527)
+- In `~/.hazlor/config/app.toml`, update minimum gas price to avoid [transaction spamming](https://github.com/cosmos/cosmos-sdk/issues/4527)
 
   ```bash
 
-  $ sed -i.bak -E 's#^(minimum-gas-prices[[:space:]]+=[[:space:]]+).*$#\1"5000000000000basecro"#' ~/.cronos/config/app.toml
+  $ sed -i.bak -E 's#^(minimum-gas-prices[[:space:]]+=[[:space:]]+).*$#\1"5000000000000basecro"#' ~/.hazlor/config/app.toml
 
   ```
 
-- For network configuration, in `~/.cronos/config/config.toml`, please modify the configurations of `persistent_peers`, `create_empty_blocks_interval` and `timeout_commit` by:
+- For network configuration, in `~/.hazlor/config/config.toml`, please modify the configurations of `persistent_peers`, `create_empty_blocks_interval` and `timeout_commit` by:
 
   ```bash
 
-  $ sed -i.bak -E 's#^(seeds[[:space:]]+=[[:space:]]+).*$#\1"0d5cf1394a1cfde28dc8f023567222abc0f47534@cronos-seed-0.crypto.org:26656,3032073adc06d710dd512240281637c1bd0c8a7b@cronos-seed-1.crypto.org:26656,04f43116b4c6c70054d9c2b7485383df5b1ed1da@cronos-seed-2.crypto.org:26656"#' ~/.cronos/config/config.toml
+  $ sed -i.bak -E 's#^(seeds[[:space:]]+=[[:space:]]+).*$#\1"0d5cf1394a1cfde28dc8f023567222abc0f47534@cronos-seed-0.crypto.org:26656,3032073adc06d710dd512240281637c1bd0c8a7b@cronos-seed-1.crypto.org:26656,04f43116b4c6c70054d9c2b7485383df5b1ed1da@cronos-seed-2.crypto.org:26656"#' ~/.hazlor/config/config.toml
 
-  $ sed -i.bak -E 's#^(create_empty_blocks_interval[[:space:]]+=[[:space:]]+).*$#\1"5s"#' ~/.cronos/config/config.toml
+  $ sed -i.bak -E 's#^(create_empty_blocks_interval[[:space:]]+=[[:space:]]+).*$#\1"5s"#' ~/.hazlor/config/config.toml
 
-  $ sed -i.bak -E 's#^(timeout_commit[[:space:]]+=[[:space:]]+).*$#\1"5s"#' ~/.cronos/config/config.toml
+  $ sed -i.bak -E 's#^(timeout_commit[[:space:]]+=[[:space:]]+).*$#\1"5s"#' ~/.hazlor/config/config.toml
 
   ```
 
@@ -312,7 +312,7 @@ User=ubuntu
 
 WorkingDirectory=/usr/local/bin
 
-ExecStart=/usr/local/bin/hazlord start --home /home/ubuntu/.cronos
+ExecStart=/usr/local/bin/hazlord start --home /home/ubuntu/.hazlor
 
 Restart=on-failure
 

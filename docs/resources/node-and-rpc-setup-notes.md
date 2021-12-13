@@ -2,20 +2,20 @@
 
 ## Node minimum setup
 
-Here we will be using a local `hazlord` folder as the home directory. By default chain data are stored in your home directory `~/.cronos`. For example, when joining the testnet `cronostestnet_338-1`: 
+Here we will be using a local `hazlord` folder as the home directory. By default chain data are stored in your home directory `~/.hazlor`. For example, when joining the testnet `cronostestnet_338-1`: 
 
 ```bash
 ./hazlord init mynode --chain-id cronostestnet_338-1 
 
-$ sed -i.bak -E 's#^(persistent_peers[[:space:]]+=[[:space:]]+).*$#\1"0d5cf1394a1cfde28dc8f023567222abc0f47534@cronos-seed-0.crypto.org:26656,3032073adc06d710dd512240281637c1bd0c8a7b@cronos-seed-1.crypto.org:26656,04f43116b4c6c70054d9c2b7485383df5b1ed1da@cronos-seed-2.crypto.org:26656"#' ~/.cronos/config/config.toml
-$ sed -i.bak -E 's#^(create_empty_blocks_interval[[:space:]]+=[[:space:]]+).*$#\1"5s"#' ~/.cronos/config/config.toml
-$ sed -i.bak -E 's#^(timeout_commit[[:space:]]+=[[:space:]]+).*$#\1"5s"#' ~/.cronos/config/config.toml
+$ sed -i.bak -E 's#^(persistent_peers[[:space:]]+=[[:space:]]+).*$#\1"0d5cf1394a1cfde28dc8f023567222abc0f47534@cronos-seed-0.crypto.org:26656,3032073adc06d710dd512240281637c1bd0c8a7b@cronos-seed-1.crypto.org:26656,04f43116b4c6c70054d9c2b7485383df5b1ed1da@cronos-seed-2.crypto.org:26656"#' ~/.hazlor/config/config.toml
+$ sed -i.bak -E 's#^(create_empty_blocks_interval[[:space:]]+=[[:space:]]+).*$#\1"5s"#' ~/.hazlor/config/config.toml
+$ sed -i.bak -E 's#^(timeout_commit[[:space:]]+=[[:space:]]+).*$#\1"5s"#' ~/.hazlor/config/config.toml
 ```
 
 
 ### Enable API and gRPC server
 
-Edit `~/.cronos/config/app.toml` and update the following section
+Edit `~/.hazlor/config/app.toml` and update the following section
 ```toml
 [api]
 
@@ -45,7 +45,7 @@ Afterward, you should be able to start you node by running
 ```bash
 ./hazlord start 
 ````
-where the blockchain data, keys will be stored at the folder `~/.cronos`
+where the blockchain data, keys will be stored at the folder `~/.hazlor`
 
 ## Access RPC server
 

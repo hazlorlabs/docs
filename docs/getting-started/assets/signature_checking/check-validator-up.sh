@@ -27,7 +27,7 @@ helpFunction() {
 Flags:
     --help                help for the script
     --tendermint-url      tendermint rpc interface for this chain (default "http://127.0.0.1:26657" if omitted)
-    --pubkey              tendermint Ed25519 PubKey; can be found in ".cronos/config/priv_validator_key.json"
+    --pubkey              tendermint Ed25519 PubKey; can be found in ".hazlor/config/priv_validator_key.json"
     --bechpubkey          bech32 consensus PubKey; converted to tendermint Ed25519 PubKey automatically; useful for node using tmkms.
 EOF
     exit 1 # Exit script after printing help

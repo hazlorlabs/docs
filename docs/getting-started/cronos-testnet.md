@@ -81,7 +81,7 @@ To simplify the following step, we will be using **Linux** (Intel x86) for illus
   and remove the old genesis file by
 
   ```bash
-  $ rm ~/.cronos/config/genesis.json
+  $ rm ~/.hazlor/config/genesis.json
   ```
 
 Before kick-starting your node, we will have to configure your node so that it connects to the Hazlor testnet:
@@ -110,7 +110,7 @@ Before kick-starting your node, we will have to configure your node so that it c
 
   ::: tip NOTE
 
-  - Depending on your hazlord home setting, the hazlord configuration will be initialized to that home directory. To simply the following steps, we will use the default hazlord home directory `~/.cronos/` for illustration.
+  - Depending on your hazlord home setting, the hazlord configuration will be initialized to that home directory. To simply the following steps, we will use the default hazlord home directory `~/.hazlor/` for illustration.
   - You can also put the `hazlord` to your binary path and run it by `hazlord`
     :::
 
@@ -121,7 +121,7 @@ Before kick-starting your node, we will have to configure your node so that it c
 - Download and replace the Hazlor Testnet `genesis.json` by:
 
   ```bash
-  $ curl https://raw.githubusercontent.com/hazlorlabs/core-testnets/main/cronostestnet_338-3/genesis.json > ~/.cronos/config/genesis.json
+  $ curl https://raw.githubusercontent.com/hazlorlabs/core-testnets/main/cronostestnet_338-3/genesis.json > ~/.hazlor/config/genesis.json
   ```
 
 
@@ -129,7 +129,7 @@ Before kick-starting your node, we will have to configure your node so that it c
 
 
   ```bash
-  $ if [[ $(sha256sum ~/.cronos/config/genesis.json | awk '{print $1}') = "7d898ad75b3e2e1fa182d928ca10a284c1dd252e12d17ad6dab76551b29d1a59" ]]; then echo "OK"; else echo "MISMATCHED"; fi;
+  $ if [[ $(sha256sum ~/.hazlor/config/genesis.json | awk '{print $1}') = "7d898ad75b3e2e1fa182d928ca10a284c1dd252e12d17ad6dab76551b29d1a59" ]]; then echo "OK"; else echo "MISMATCHED"; fi;
 
   OK!
   ```
@@ -146,17 +146,17 @@ Before kick-starting your node, we will have to configure your node so that it c
 
     :::
 
-- In `~/.cronos/config/app.toml`, update minimum gas price to avoid [transaction spamming](https://github.com/cosmos/cosmos-sdk/issues/4527)
+- In `~/.hazlor/config/app.toml`, update minimum gas price to avoid [transaction spamming](https://github.com/cosmos/cosmos-sdk/issues/4527)
 
   ```bash
-  $ sed -i.bak -E 's#^(minimum-gas-prices[[:space:]]+=[[:space:]]+).*$#\1"5000000000000basetcro"#' ~/.cronos/config/app.toml
+  $ sed -i.bak -E 's#^(minimum-gas-prices[[:space:]]+=[[:space:]]+).*$#\1"5000000000000basetcro"#' ~/.hazlor/config/app.toml
   ```
 
-- For network configuration, in `~/.cronos/config/config.toml`, please modify the configurations of `persistent_peers`, `create_empty_blocks_interval` and `timeout_commit` by:
+- For network configuration, in `~/.hazlor/config/config.toml`, please modify the configurations of `persistent_peers`, `create_empty_blocks_interval` and `timeout_commit` by:
   ```bash
-  $ sed -i.bak -E 's#^(persistent_peers[[:space:]]+=[[:space:]]+).*$#\1"8fcba3485c67a2a00a383b6f45660a4ac529c6ca@52.77.30.18:26656,e65199bc579ffd89d7c021c5611f9f1c97f7ff13@54.251.209.254:26656"#' ~/.cronos/config/config.toml
-  $ sed -i.bak -E 's#^(create_empty_blocks_interval[[:space:]]+=[[:space:]]+).*$#\1"5s"#' ~/.cronos/config/config.toml
-  $ sed -i.bak -E 's#^(timeout_commit[[:space:]]+=[[:space:]]+).*$#\1"5s"#' ~/.cronos/config/config.toml
+  $ sed -i.bak -E 's#^(persistent_peers[[:space:]]+=[[:space:]]+).*$#\1"8fcba3485c67a2a00a383b6f45660a4ac529c6ca@52.77.30.18:26656,e65199bc579ffd89d7c021c5611f9f1c97f7ff13@54.251.209.254:26656"#' ~/.hazlor/config/config.toml
+  $ sed -i.bak -E 's#^(create_empty_blocks_interval[[:space:]]+=[[:space:]]+).*$#\1"5s"#' ~/.hazlor/config/config.toml
+  $ sed -i.bak -E 's#^(timeout_commit[[:space:]]+=[[:space:]]+).*$#\1"5s"#' ~/.hazlor/config/config.toml
   ```
 
 ::: tip NOTE
@@ -242,7 +242,7 @@ After=network.target
 Type=simple
 User=ubuntu
 WorkingDirectory=/usr/local/bin
-ExecStart=/usr/local/bin/hazlord start --home /home/ubuntu/.cronos
+ExecStart=/usr/local/bin/hazlord start --home /home/ubuntu/.hazlor
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=4096
@@ -344,7 +344,7 @@ To further check if the validator is signing blocks, kindly run this [script](ht
 ```bash
 $ curl -sSL https://raw.githubusercontent.com/crypto-com/chain-docs/master/docs/getting-started/assets/signature_checking/check-validator-up.sh | bash -s -- \
 --tendermint-url https://cronos-testnet-3.crypto.org:26657 \
---pubkey $(cat ~/.cronos/config/priv_validator_key.json | jq -r '.pub_key.value')
+--pubkey $(cat ~/.hazlor/config/priv_validator_key.json | jq -r '.pub_key.value')
 
 The validator is in the active validator set under the address  <YOUR_VALIDATOR_ADDRESS>
 The validator is signing @ Block#<BLOCK_HEIGHT> 👍

@@ -246,6 +246,6 @@ sudo systemctl start tmkms.service
 
 One should follow the same steps in [cronos Testnet: Running Nodes](./cronos-testnet.md)
 
-Except for one last thing one needs to further configure `~/.cronos/config/config.toml` to enable enclave tmkm to sign.
+Except for one last thing one needs to further configure `~/.hazlor/config/config.toml` to enable enclave tmkm to sign.
 
-In `~/.cronos/config/config.toml`, `priv_validator_key_file` and `priv_validator_state_file` should be commented and uncomment `priv_validator_laddr` to value `unix://...` which should match the `address` in `tmkms.toml`. e.g. `unix:///home/ec2-user/sockets/validator.socket`
+In `~/.hazlor/config/config.toml`, `priv_validator_key_file` and `priv_validator_state_file` should be commented and uncomment `priv_validator_laddr` to value `unix://...` which should match the `address` in `tmkms.toml`. e.g. `unix:///home/ec2-user/sockets/validator.socket`

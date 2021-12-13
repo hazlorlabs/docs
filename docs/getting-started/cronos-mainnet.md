@@ -44,7 +44,7 @@ meta:
 
     content: https://cronos.crypto.org/og-image.png
 
-canonicalUrl: https://cronos.crypto.org/docs/getting-started/cronos-mainnet.html
+canonicalUrl: https://cronos.crypto.org/docs/getting-started/hazlor-mainnet.html
 ---
 
 # Hazlor Mainnet: Running Nodes

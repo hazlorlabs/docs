@@ -33,7 +33,7 @@ Thanks for your interest in Hazlor Chain. In this technical documentation, we ha
 
 #### Hazlor Hazlor Chain
 
-- [Join Hazlor Mainnet Beta](./cronos-mainnet.md):
+- [Join Hazlor Mainnet Beta](./hazlor-mainnet.md):
 
   Try running Full Node connected Hazlor Mainnet Beta.
   

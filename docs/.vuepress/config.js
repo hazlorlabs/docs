@@ -18,7 +18,7 @@ module.exports = {
         items: [
           {
           text: "Hazlor Mainnet Beta",
-            link: "/getting-started/cronos-mainnet"
+            link: "/getting-started/hazlor-mainnet"
           },
           {
           text: "Using Metamask",
@@ -127,7 +127,7 @@ module.exports = {
     ],
     sidebar: {
       "/getting-started/": [
-        "cronos-mainnet",
+        "hazlor-mainnet",
         "metamask",
         "cronos-testnet",
         "local-devnet",

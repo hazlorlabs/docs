@@ -15,7 +15,7 @@
         <img
           class="logoicon wide-hide"
           v-if="$site.themeConfig.logo"
-          :src="$withBase('/logo-icon-white.svg')"
+          :src="$withBase('/https://hazlor.com/wp-content/uploads/2021/11/Logo.png')"
           :alt="$siteTitle"
         >
         <span

@@ -4,7 +4,7 @@
       <header class="hero">
         <img
           class="logo"
-          :src="$withBase('/logo-icon-white.svg')"
+          :src="$withBase('https://hazlor.com/wp-content/uploads/2021/11/Logo.png')"
           alt="logo-icon-white"
         />
         <p class="description">Welcome to</p>

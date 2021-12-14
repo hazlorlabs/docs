@@ -61,30 +61,30 @@
           </div>
         </div>
         <div class="socials">
-          <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/cronos_chain">
+          <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/HazlorLabs">
             <img :src="$withBase('/social/twitter.svg')" alt="twitter" />
           </a>
-          <!-- <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/CryptoComOfficial">
+          <!-- <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Hazlor-Labs-Inc-106307468480271">
             <img :src="$withBase('/social/facebook.svg')" alt="facebook" />
           </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/cryptocomofficial/">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/hazlorlabs/">
             <img :src="$withBase('/social/instagram.svg')" alt="instagram" />
           </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://hk.linkedin.com/company/cryptocom">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/hazlor-labs-inc">
             <img :src="$withBase('/social/linkedin.svg')" alt="linkedin" />
           </a>
           <a target="_blank" rel="noopener noreferrer"
-            href="https://www.youtube.com/channel/UCOMprzxakZOqmY23LYIawmg"
+            href="https://www.youtube.com/"
           >
             <img :src="$withBase('/social/youtube.svg')" alt="youtube" />
           </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/Crypto_com/">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/hazlorlabs/">
             <img :src="$withBase('/social/reddit.svg')" alt="reddit" />
           </a> -->
-          <a target="_blank" rel="noopener noreferrer" href="https://discord.com/invite/pahqHz26q4">
+          <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/X6ZjdB4BEJ">
             <img :src="$withBase('/social/discord.svg')" alt="discord" />
           </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://t.me/Cryptoorg_Chain_Announcements">
+          <a target="_blank" rel="noopener noreferrer" href="https://t.me/hazlorlabs">
             <img :src="$withBase('/social/telegram.svg')" alt="telegram" />
           </a>
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/hazlorlabs/core-docs">
@@ -96,7 +96,7 @@
         </div>
       </div>
       <p class="copyright">
-        Copyright © {{ currentYear }} CRO Protocol Labs. All rights reserved.
+        Copyright © {{ currentYear }} Hazlor Labs Inc. All rights reserved.
       </p>
     </div>
   </footer>

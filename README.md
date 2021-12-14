@@ -23,7 +23,7 @@ You're going to need:
 
 1. Fork this repository on Github
 2. Clone your forked repository (not our original one) to your hard drive with `git clone https://github.com/YOURUSERNAME/hazlorlabs-docs.git`
-3. `cd cronos-docs`
+3. `cd hazlor-docs`
 4. Initialize and start chain-docs.
 
 ```bash
@@ -77,7 +77,7 @@ module.exports = {
 
 ## Generating a PDF version of the site
 
-Go to ``cronos-docs/docs``, then run:
+Go to ``hazlor-docs/docs``, then run:
 
 ```bash
 vuepress export

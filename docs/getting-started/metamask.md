@@ -22,7 +22,7 @@ meta:
     content: Learn how to use the MetaMask chrome extension to send or receive and interact with the Hazlor testnet in this technical documentation.
   - name: "twitter:image"
     content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
-canonicalUrl: https://cronos.crypto.org/docs/getting-started/metamask.html
+canonicalUrl: https://docs.hazlor.com/docs/getting-started/metamask.html
 ---
 
 # Using MetaMask on Hazlor mainnet Beta
@@ -45,7 +45,7 @@ First of all we would need to connect the MetaMask with the Hazlor chain network
   - `https://evm-cronos.crypto.org` for **New RPC URL**; and 
   - `25` for **Chain ID**, 
   - `CRO` for the symbol, and
-  - `https://cronos.crypto.org/explorer/` for the **Block explorer URL** as below:
+  - `https://docs.hazlor.com/explorer/` for the **Block explorer URL** as below:
 
     <img src="./assets/3.png" width="350" />
 

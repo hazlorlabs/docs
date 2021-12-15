@@ -44,7 +44,7 @@ meta:
 
     content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
 
-canonicalUrl: https://cronos.crypto.org/docs/getting-started/hazlor-mainnet.html
+canonicalUrl: https://docs.hazlor.com/docs/getting-started/hazlor-mainnet.html
 ---
 
 # Hazlor Mainnet: Running Nodes

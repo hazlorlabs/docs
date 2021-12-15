@@ -22,7 +22,7 @@ meta:
     content: The genesis.json file defines the initial state of the Hazlor Chain. Find out more about genesis file in this documentation.
   - name: "twitter:image"
     content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
-canonicalUrl: https://cronos.crypto.org/docs/chain-details/genesis_file.html
+canonicalUrl: https://docs.hazlor.com/docs/chain-details/genesis_file.html
 ---
 
 # Genesis

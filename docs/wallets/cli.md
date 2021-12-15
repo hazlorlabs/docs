@@ -22,7 +22,7 @@ meta:
     content: hazlord is the all-in-one command-line interface. It supports wallet management, funds transfer and staking operations.
   - name: "twitter:image"
     content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
-canonicalUrl: https://cronos.crypto.org/docs/wallets/cli.html
+canonicalUrl: https://docs.hazlor.com/docs/wallets/cli.html
 ---
 
 # hazlord

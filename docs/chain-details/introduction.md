@@ -22,7 +22,7 @@ meta:
     content: Hazlor Testnet aims to massively scale the Chain DeFi ecosystem, by providing developers with the ability to rapidly port apps from Ethereum and EVM-compatible chains.
   - name: "twitter:image"
     content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
-canonicalUrl: https://cronos.crypto.org/docs/chain-details/introduction.html
+canonicalUrl: https://docs.hazlor.com/docs/chain-details/introduction.html
 ---
 
 # Introduction

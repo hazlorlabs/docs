@@ -31,7 +31,7 @@ meta:
     content: View our latest chain documentation on Hazlor. Sign up to our newsletter to get the latest updates and read the documentation to connect to our Testnet. 
   - name: "twitter:image"
     content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
-canonicalUrl: https://cronos.crypto.org/docs/
+canonicalUrl: https://docs.hazlor.com/docs/
 ---
 
 The documentation in this repository site is meant to provide specifications and implementation details that will be useful to third party developers or contributors to the main [repository](https://github.com/crypto-com/chain-docs-nextgen).

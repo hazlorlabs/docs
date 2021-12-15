@@ -8,7 +8,7 @@
 
 The Hazlor bridge’s goal is to support a seamless transfer of assets between blockchains to foster interoperability and for users to enjoy the best Dapps and earnings no matter the chain.
 
-The Hazlor Bridge (Beta) can be found at [https://cronos.crypto.org/bridge](https://cronos.crypto.org/bridge)
+The Hazlor Bridge (Beta) can be found at [https://docs.hazlor.com/bridge](https://docs.hazlor.com/bridge)
 
 Our bridge is a fully decentralized protocol built on the open-source projects of [IBC](https://ibcprotocol.org/) and [Gravity Bridge](https://github.com/cosmos/gravity-bridge).
 

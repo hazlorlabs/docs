@@ -22,7 +22,7 @@ meta:
     content: Learn how to deploy a smart contract to Hazlor using Solidity, both Truffle and Hardhat are included in this technical documentation.
   - name: "twitter:image"
     content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
-canonicalUrl: https://cronos.crypto.org/docs/getting-started/cronos-smart-contract.html
+canonicalUrl: https://docs.hazlor.com/docs/getting-started/cronos-smart-contract.html
 ---
 
 # Hazlor: Deploy Smart Contract
@@ -43,7 +43,7 @@ You can refer to [Downloading and installing Node.js and npm](https://docs.npmjs
 `Nodejs v10` is suggested 
 
 ### Sufficient fund on deployer address
-You can access to [faucet](https://cronos.crypto.org/faucet) and [explorer](https://cronos-explorer.crypto.org/) to obtain testnet TCRO.
+You can access to [faucet](https://docs.hazlor.com/faucet) and [explorer](https://cronos-explorer.crypto.org/) to obtain testnet TCRO.
 
 ### Git clone `smart-contract-example`
   ```bash

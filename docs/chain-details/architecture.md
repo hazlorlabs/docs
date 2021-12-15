@@ -22,7 +22,7 @@ meta:
     content: Hazlor is an EVM sidechain along the main Hazlor Chain built on Ethermint with smart contract capability. It aims to empower and scale decentralised applications for the future multichain world.
   - name: "twitter:image"
     content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
-canonicalUrl: https://cronos.crypto.org/docs/chain-details/architecture.html
+canonicalUrl: https://docs.hazlor.com/docs/chain-details/architecture.html
 ---
 
 # Architecture

@@ -22,7 +22,7 @@ meta:
     content: Learn how to setup a Validator or a full node on Hazlor Hazlor testnet cronostestnet_338-3 in this technical documentation.
   - name: "twitter:image"
     content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
-canonicalUrl: https://cronos.crypto.org/docs/getting-started/cronos-testnet.html
+canonicalUrl: https://docs.hazlor.com/docs/getting-started/cronos-testnet.html
 ---
 
 # Hazlor Testnet: Running Nodes
@@ -185,7 +185,7 @@ You should obtain an address with `tscas` prefix, e.g. `tscas10u5mgfflasrfj9s94m
 
 ### Step 3-2. Obtain test token
 
-Users can the [faucet](https://cronos.crypto.org/faucet) to obtain test tokens, please note that you would need a Ethereum type address `0x...` that can be obtained by
+Users can the [faucet](https://docs.hazlor.com/faucet) to obtain test tokens, please note that you would need a Ethereum type address `0x...` that can be obtained by
 
 - [Using metamask](./metamask.md#using-metamask); or
 - Using the [address convention tool](./metamask.md#address-conventions).
@@ -403,15 +403,15 @@ $ ./hazlord tx slashing unjail --from [key_name] --chain-id "cronostestnet_338-3
 
 :::
 
-Congratulations! You've successfully set up a Testnet node and performed some basic transactions! You may refer to [Wallet Management](https://cronos.crypto.org/docs/wallets/cli.html#hazlord) for more advanced operations and transactions.
+Congratulations! You've successfully set up a Testnet node and performed some basic transactions! You may refer to [Wallet Management](https://docs.hazlor.com/docs/wallets/cli.html#hazlord) for more advanced operations and transactions.
 
 ## Hazlor testnet faucet and explorer
 
 
 
-- You can lookup data within the `cronostestnet_338-3` network by the [explorer](https://cronos.crypto.org/explorer/testnet3);
+- You can lookup data within the `cronostestnet_338-3` network by the [explorer](https://docs.hazlor.com/explorer/testnet3);
 
-- To interact with the blockchain, simply use the [test-token faucet](https://cronos.crypto.org/faucet) to obtain test CRO tokens for performing transactions on the **Hazlor** testnet.
+- To interact with the blockchain, simply use the [test-token faucet](https://docs.hazlor.com/faucet) to obtain test CRO tokens for performing transactions on the **Hazlor** testnet.
 
   - Note that you will need to create an [address](#step-3-1-create-a-new-key-and-address) before using the faucet.
 

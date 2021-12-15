@@ -22,7 +22,7 @@ meta:
     content: Brief description of all the mentioned network parameters
   - name: "twitter:image"
     content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
-canonicalUrl: https://cronos.crypto.org/docs/chain-details/parameters.html
+canonicalUrl: https://docs.hazlor.com/docs/chain-details/parameters.html
 ---
 
 # List of parameters

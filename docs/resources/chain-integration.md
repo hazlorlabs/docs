@@ -2,10 +2,10 @@
 
 ## Useful Links
 
-- [Hazlor website](https://cronos.crypto.org/)
+- [Hazlor website](https://docs.hazlor.com/)
 - [GitHub Repository](https://github.com/hazlorlabs/core)
-- [Official Documentation](https://cronos.crypto.org/docs/)
-- [Testnet Faucet](https://cronos.crypto.org/faucet/)
+- [Official Documentation](https://docs.hazlor.com/docs/)
+- [Testnet Faucet](https://docs.hazlor.com/faucet/)
   - Note that the faucet only takes eth-type `0x...` addr
 - [Binaries](https://github.com/hazlorlabs/core/releases)
 
@@ -17,9 +17,9 @@
 ## Setup Guide
 
 - **Hazlor Testnet**:
-  - [Joining the Hazlor Testnet](https://cronos.crypto.org/docs/getting-started/)
-  - [Using MetaMask](https://cronos.crypto.org/docs/getting-started/metamask.html)
-  - [Deploying Smart Contract](https://cronos.crypto.org/docs/getting-started/cronos-smart-contract.html)
+  - [Joining the Hazlor Testnet](https://docs.hazlor.com/docs/getting-started/)
+  - [Using MetaMask](https://docs.hazlor.com/docs/getting-started/metamask.html)
+  - [Deploying Smart Contract](https://docs.hazlor.com/docs/getting-started/cronos-smart-contract.html)
 
 ## RPC URLs for Hazlor mainnet Beta
 
@@ -349,7 +349,7 @@ The examples also do not include the URL/IP & port combination which must be the
 - Hazlor Mainnet Beta:
   [https://cronos-explorer.crypto.org/](https://cronos-explorer.crypto.org)
 - Hazlor Testnet:
-  [https://cronos.crypto.org/explorer/testnet3](https://cronos.crypto.org/explorer/testnet3)
+  [https://docs.hazlor.com/explorer/testnet3](https://docs.hazlor.com/explorer/testnet3)
 
 ## Community
 

@@ -22,7 +22,7 @@ meta:
     content: Learn how to compile and run the latest development version of Hazlor testnet from scratch. This page is for building and running the latest development version of the chain for testing purpose only.
   - name: "twitter:image"
     content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
-canonicalUrl: https://cronos.crypto.org/docs/getting-started/local-devnet.html
+canonicalUrl: https://docs.hazlor.com/docs/getting-started/local-devnet.html
 ---
 
 # Devnet: Running Latest Development Node

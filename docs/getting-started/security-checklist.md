@@ -22,7 +22,7 @@ meta:
     content: Learn how to perform a survey on your hosting data centre and node setup in this technical documentation.
   - name: "twitter:image"
     content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
-canonicalUrl: https://cronos.crypto.org/docs/getting-started/security-checklist.html
+canonicalUrl: https://docs.hazlor.com/docs/getting-started/security-checklist.html
 ---
 
 # Validator Security Checklist

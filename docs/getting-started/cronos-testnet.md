@@ -3,13 +3,13 @@ meta:
   - name: "title"
     content: Hazlor | Hazlor EVM Chain | Running Nodes On Testnet
   - name: "description"
-    content: Learn how to setup a Validator or a full node on Hazlor Hazlor testnet cronostestnet_338-3 in this technical documentation.
+    content: Learn how to setup a Validator or a full node on Hazlor Hazlor testnet hazlor_7878-1 in this technical documentation.
   - name: "og:title"
     content: Hazlor | Hazlor EVM Chain | Running Nodes On Testnet
   - name: "og:type"
     content: Website
   - name: "og:description"
-    content: Learn how to setup a Validator or a full node on Hazlor Hazlor testnet cronostestnet_338-3 in this technical documentation.
+    content: Learn how to setup a Validator or a full node on Hazlor Hazlor testnet hazlor_7878-1 in this technical documentation.
   - name: "og:image"
     content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
   - name: "twitter:title"
@@ -19,7 +19,7 @@ meta:
   - name: "twitter:card"
     content: summary_large_image
   - name: "twitter:description"
-    content: Learn how to setup a Validator or a full node on Hazlor Hazlor testnet cronostestnet_338-3 in this technical documentation.
+    content: Learn how to setup a Validator or a full node on Hazlor Hazlor testnet hazlor_7878-1 in this technical documentation.
   - name: "twitter:image"
     content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
 canonicalUrl: https://docs.hazlor.com/docs/getting-started/cronos-testnet.html
@@ -29,7 +29,7 @@ canonicalUrl: https://docs.hazlor.com/docs/getting-started/cronos-testnet.html
 
 The latest Hazlor Chain Testnet has been named as **Hazlor**.
 
-This is a detailed documentation for setting up a Validator or a full node on Hazlor Hazlor testnet `cronostestnet_338-3`.
+This is a detailed documentation for setting up a Validator or a full node on Hazlor Hazlor testnet `hazlor_7878-1`.
 
 ## Pre-requisites
 
@@ -92,7 +92,7 @@ Before kick-starting your node, we will have to configure your node so that it c
 
 
   ```bash
-    $ ./hazlord init [moniker] --chain-id cronostestnet_338-3
+    $ ./hazlord init [moniker] --chain-id hazlor_7878-1
   ```
 
 
@@ -103,7 +103,7 @@ Before kick-starting your node, we will have to configure your node so that it c
 
 
   ```bash
-    $ ./hazlord init pegasus-node --chain-id cronostestnet_338-3
+    $ ./hazlord init pegasus-node --chain-id hazlor_7878-1
   ```
 
 
@@ -121,7 +121,7 @@ Before kick-starting your node, we will have to configure your node so that it c
 - Download and replace the Hazlor Testnet `genesis.json` by:
 
   ```bash
-  $ curl https://raw.githubusercontent.com/hazlorlabs/core-testnets/main/cronostestnet_338-3/genesis.json > ~/.hazlor/config/genesis.json
+  $ curl https://raw.githubusercontent.com/hazlorlabs/core-testnets/main/hazlor_7878-1/genesis.json > ~/.hazlor/config/genesis.json
   ```
 
 
@@ -307,7 +307,7 @@ $ ./hazlord tx staking create-validator \
 --pubkey='{"@type":"/cosmos.crypto.ed25519.PubKey","key":"PUBLIC_KEY"}'  \
 --moniker="[The_id_of_your_node]" \
 --security-contact="[security contact email/contact method]" \
---chain-id="cronostestnet_338-3" \
+--chain-id="hazlor_7878-1" \
 --commission-rate="0.10" \
 --commission-max-rate="0.20" \
 --commission-max-change-rate="0.01" \
@@ -395,7 +395,7 @@ $ ./hazlord query staking validators -o json | jq
 Where `"jailed": true` implies that the validator has been jailed. After the jailing period has passed, one can broadcast a `unjail` transaction to unjail the validator and resume its normal operations by
 
 ```bash
-$ ./hazlord tx slashing unjail --from [key_name] --chain-id "cronostestnet_338-3" --fees=1000000000000000000basetscas
+$ ./hazlord tx slashing unjail --from [key_name] --chain-id "hazlor_7878-1" --fees=1000000000000000000basetscas
 
   {"body":{"messages":[{"@type":"/cosmos.slashing.v1beta1.MsgUnjail"...}]}
   confirm transaction before signing and broadcasting [y/N]: y
@@ -409,7 +409,7 @@ Congratulations! You've successfully set up a Testnet node and performed some ba
 
 
 
-- You can lookup data within the `cronostestnet_338-3` network by the [explorer](https://docs.hazlor.com/explorer/testnet3);
+- You can lookup data within the `hazlor_7878-1` network by the [explorer](https://docs.hazlor.com/explorer/testnet3);
 
 - To interact with the blockchain, simply use the [test-token faucet](https://docs.hazlor.com/faucet) to obtain test CRO tokens for performing transactions on the **Hazlor** testnet.
 

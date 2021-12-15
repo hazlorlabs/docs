@@ -103,7 +103,7 @@ To simplify the following step, we will be using **Linux** (Intel x86) for illus
 
 ### Step 2-0 (Optional) Clean up the old blockchain data
 
-- If you have joined `cronostestnet_338-3` before, you would have to clean up the old blockchain data and start over again, it can be done by running:
+- If you have joined `hazlor_7878-1` before, you would have to clean up the old blockchain data and start over again, it can be done by running:
 
   ```bash
 

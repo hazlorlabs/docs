@@ -41,11 +41,11 @@ First of all we would need to connect the MetaMask with the Hazlor chain network
 
     <img src="./assets/2.png" />
 
-- Insert the network name, for example "Hazlor" and put 
-  - `https://evm-cronos.crypto.org` for **New RPC URL**; and 
-  - `25` for **Chain ID**, 
-  - `CRO` for the symbol, and
-  - `https://docs.hazlor.com/explorer/` for the **Block explorer URL** as below:
+- Insert the network name, for example "Hazlor Testnet" and put 
+  - `http://hatlas.rpc.hazlor.com` for **New RPC URL**; and 
+  - `7878` for **Chain ID**, 
+  - `TSCAS` for the symbol, and
+  - `https://explorer.hazlor.com` for the **Block explorer URL** as below:
 
     <img src="./assets/3.png" width="350" />
 

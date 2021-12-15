@@ -54,7 +54,7 @@ You can access to [faucet](https://cronos.crypto.org/faucet) and [explorer](http
 
 ### Step 1. Enter `smart-contract-example/truffle` folder
   ```bash
-  $ cd cronos-smart-contract-example/truffle
+  $ cd core-smart-contract-example/truffle
   ```
 
 ### Step 2. Run `npm install` inside the folder
@@ -75,10 +75,10 @@ You can access to [faucet](https://cronos.crypto.org/faucet) and [explorer](http
 
 ### Step 5. Review Migration Script at `migrations/2_deploy_cronos_token.js`
   ```javascript
-    const CronosToken = artifacts.require("CronosToken");
+    const HazlorToken = artifacts.require("HazlorToken");
     
     module.exports = function (deployer) {
-        deployer.deploy(CronosToken, "Hazlor Token", "CRT", "1000000000000000000000000");
+        deployer.deploy(HazlorToken, "Hazlor Token", "TSCAS", "1000000000000000000000000");
     };
   ```
   
@@ -137,12 +137,12 @@ Correct balance will be shown on Metamask page
 ### Step 5. Review Migration Script at `scripts/deploy-cronos-token.js`
   ```javascript
     async function main() {
-        const CronosToken = await hre.ethers.getContractFactory("CronosToken");
-        const cronosToken = await CronosToken.deploy("Hazlor Token", "CRT", "1000000000000000000000000");
+        const HazlorToken = await hre.ethers.getContractFactory("HazlorToken");
+        const cronosToken = await HazlorToken.deploy("Hazlor Token", "TSCAS", "1000000000000000000000000");
     
         await cronosToken.deployed();
     
-        console.log("CronosToken deployed to:", cronosToken.address);
+        console.log("HazlorToken deployed to:", cronosToken.address);
     }
   ```
 
@@ -171,7 +171,7 @@ By default, the script will be using your local host `"127.0.0.1"`  - If you are
 ### Step 8. Obtain Contract address from console and input to Metamask
 Correct balance will be shown on Metamask page
   ```bash
-  CronosToken deployed to: 0x5F803c894a0A16B46fe5982fB5D89eb334eAF68
+  HazlorToken deployed to: 0x5F803c894a0A16B46fe5982fB5D89eb334eAF68
   ```
 <img src="./assets/cronos-smart-contract/metamask_add_tokens.png" />
 <img src="./assets/cronos-smart-contract/metamask_add_token_success.png" />

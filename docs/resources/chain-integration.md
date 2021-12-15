@@ -5,7 +5,7 @@
 - [Hazlor website](https://hazlor.com/)
 - [GitHub Repository](https://github.com/hazlorlabs/core)
 - [Official Documentation](https://docs.hazlor.com/docs/)
-- [Testnet Faucet](https://docs.hazlor.com/faucet/)
+- [Testnet Faucet](https://faucet.hazlor.com/)
   - Note that the faucet only takes eth-type `0x...` addr
 - [Binaries](https://github.com/hazlorlabs/core/releases)
 
@@ -349,7 +349,7 @@ The examples also do not include the URL/IP & port combination which must be the
 - Hazlor Mainnet Beta:
   [https://cronos-explorer.crypto.org/](https://explorer.hazlor.com)
 - Hazlor Testnet:
-  [https://docs.hazlor.com/explorer/testnet3](https://docs.hazlor.com/explorer/testnet3)
+  [https://explorer.hazlor.com](https://explorer.hazlor.com)
 
 ## Community
 

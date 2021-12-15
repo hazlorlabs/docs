@@ -185,7 +185,7 @@ You should obtain an address with `tscas` prefix, e.g. `tscas10u5mgfflasrfj9s94m
 
 ### Step 3-2. Obtain test token
 
-Users can the [faucet](https://docs.hazlor.com/faucet) to obtain test tokens, please note that you would need a Ethereum type address `0x...` that can be obtained by
+Users can the [faucet](https://faucet.hazlor.com) to obtain test tokens, please note that you would need a Ethereum type address `0x...` that can be obtained by
 
 - [Using metamask](./metamask.md#using-metamask); or
 - Using the [address convention tool](./metamask.md#address-conventions).
@@ -409,9 +409,9 @@ Congratulations! You've successfully set up a Testnet node and performed some ba
 
 
 
-- You can lookup data within the `hazlor_7878-1` network by the [explorer](https://docs.hazlor.com/explorer/testnet3);
+- You can lookup data within the `hazlor_7878-1` network by the [explorer](https://explorer.hazlor.com);
 
-- To interact with the blockchain, simply use the [test-token faucet](https://docs.hazlor.com/faucet) to obtain test CRO tokens for performing transactions on the **Hazlor** testnet.
+- To interact with the blockchain, simply use the [test-token faucet](https://faucet.hazlor.com) to obtain test CRO tokens for performing transactions on the **Hazlor** testnet.
 
   - Note that you will need to create an [address](#step-3-1-create-a-new-key-and-address) before using the faucet.
 

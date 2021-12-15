@@ -47,7 +47,7 @@ You can access to [faucet](https://cronos.crypto.org/faucet) and [explorer](http
 
 ### Git clone `smart-contract-example`
   ```bash
-  $ git clone git@github.com:hazlorlabs/core-smart-contract-example.git
+  $ git clone https://github.com/hazlorlabs/core-smart-contract-example.git
   ```
 
 ## Truffle: Deploy ERC20 Contract

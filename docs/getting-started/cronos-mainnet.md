@@ -233,7 +233,7 @@ Run the followings to create a new key. For example, you can create a key with t
 
 ```
 
-You should obtain an address with `crc` prefix, e.g. `crc10u5mgfflasrfj9s94mt8l9yucrt2gzhcyt5tsg`. This will be the address for performing transactions.
+You should obtain an address with `tscas` prefix, e.g. `crc10u5mgfflasrfj9s94mt8l9yucrt2gzhcyt5tsg`. This will be the address for performing transactions.
 
 
 ### Step 3-2. Run everything

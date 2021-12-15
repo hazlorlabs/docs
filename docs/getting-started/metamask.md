@@ -76,7 +76,7 @@ Once it has been connect, you should see the balance and may start performing tr
 
 ## Address conventions
 
-Note that the address format in Hazlor is in there form of bech32 `crc...` , we can use `hazlord debug addr` to convert an address between hex and bech32, for example:
+Note that the address format in Hazlor is in there form of bech32 `tscas...` , we can use `hazlord debug addr` to convert an address between hex and bech32, for example:
 
 ```
 $ hazlord keys list --keyring-backend test

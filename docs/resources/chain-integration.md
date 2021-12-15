@@ -2,7 +2,7 @@
 
 ## Useful Links
 
-- [Hazlor website](https://docs.hazlor.com/)
+- [Hazlor website](https://hazlor.com/)
 - [GitHub Repository](https://github.com/hazlorlabs/core)
 - [Official Documentation](https://docs.hazlor.com/docs/)
 - [Testnet Faucet](https://docs.hazlor.com/faucet/)

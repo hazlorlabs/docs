@@ -11,7 +11,7 @@ meta:
   - name: "og:description"
     content: Hazlor Testnet aims to massively scale the Chain DeFi ecosystem, by providing developers with the ability to rapidly port apps from Ethereum and EVM-compatible chains.
   - name: "og:image"
-    content: https://cronos.crypto.org/og-image.png
+    content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
   - name: "twitter:title"
     content: Hazlor | Hazlor EVM Chain | Testnet Introduction
   - name: "twitter:site"
@@ -21,7 +21,7 @@ meta:
   - name: "twitter:description"
     content: Hazlor Testnet aims to massively scale the Chain DeFi ecosystem, by providing developers with the ability to rapidly port apps from Ethereum and EVM-compatible chains.
   - name: "twitter:image"
-    content: https://cronos.crypto.org/og-image.png
+    content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
 canonicalUrl: https://cronos.crypto.org/docs/chain-details/introduction.html
 ---
 
@@ -32,9 +32,9 @@ canonicalUrl: https://cronos.crypto.org/docs/chain-details/introduction.html
 
 ### Hazlor Chain
 
-Hazlor introduces the Hazlor mainnet beta, the Cosmos SDK based EVM compatible chain, on 8 Nov 2021.
+Hazlor introduces the Hazlor mainnet beta, the Cosmos SDK based EVM compatible chain, COMING IN  2022.
 
-Hazlor is the EVM compatible chain running in parallel to the [Hazlor Chain](https://crypto.org/docs/). It aims to massively scale the Chain DeFi ecosystem, by providing developers with the ability to rapidly port apps from Ethereum and EVM-compatible chains, with funding from [Particle B’s $100m EVM fund](https://blog.crypto.com/particle-b-accelerator-launches-the-cro-evm-fund/) and access to the 10M+ user base of the Hazlor.finance ecosystem.
+
 
 #### Hazlor on Ethermint
 

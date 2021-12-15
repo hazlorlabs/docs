@@ -6,7 +6,7 @@
           <a href="/">
             <img
               class="footer-logo"
-              :src="$withBase('/cronos-horizontal-logo-white.svg')"
+              :src="$withBase('https://hazlor.com/wp-content/uploads/2021/10/Logo-White.png')"
               alt="logo-icon-white"
             />
           </a>
@@ -87,7 +87,7 @@
           <a target="_blank" rel="noopener noreferrer" href="https://t.me/hazlorlabs">
             <img :src="$withBase('/social/telegram.svg')" alt="telegram" />
           </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/hazlorlabs/core-docs">
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/hazlorlabs/core">
             <img :src="$withBase('/social/github.svg')" alt="github" />
           </a>
           <!-- <a target="_blank" rel="noopener noreferrer" href="https://open.kakao.com/o/gGH1WQM">

@@ -91,7 +91,7 @@ Validator could be punished and jailed due to network misbehaviour, for example 
 ```bash
 $ hazlord query staking validators -o json | jq
 ................................
-    "operator_address": "crocncl18prgwae59zdqpwye6t4xftmq3d87vl0h0rj0qq",
+    "operator_address": "scascncl18prgwae59zdqpwye6t4xftmq3d87vl0h0rj0qq",
     "consensus_pubkey": "crocnclconspub1zcjduepqg0yml2l63qjnhr2cuw4tvprr72tle0twf3zymrxllmr0sj9uv3tqmpcrhs",
     "jailed": true,
     "status": 1,
@@ -101,7 +101,7 @@ $ hazlord query staking validators -o json | jq
 After the jailing period has passed, one can broadcast a `unjail` transaction to unjail the validator and resume its normal operations by
 
 ```bash
-$ hazlord tx slashing unjail --from node1 --chain-id cro-test
+$ hazlord tx slashing unjail --from node1 --chain-id scas-test
   {"body":{"messages":[{"@type":"/cosmos.slashing.v1beta1.MsgUnjail"...}]}
   confirm transaction before signing and broadcasting [y/N]: y
 ```

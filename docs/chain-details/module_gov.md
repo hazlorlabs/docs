@@ -132,7 +132,7 @@ $ hazlord query gov params --output json | jq
   "deposit_params": {
     "min_deposit": [
       {
-        "denom": "basetcro",
+        "denom": "basetscas",
         "amount": "10000000"
       }
     ],
@@ -154,7 +154,7 @@ The following tables show overall effects on different configurations of the gov
 | Higher               | Larger window for calculating the downtime  | Longer deposit period        | Longer voting period         |
 | Lower                | Smaller window for calculating the downtime | Shorter deposit period       | Shorter voting period        |
 | Constraints          | Value has to be a positive integer          | Value has to be positive     | Value has to be positive     |
-| Sample configuration | `100000` (100000 cro)                       | `1209600000000000` (2 weeks) | `1209600000000000` (2 weeks) |
+| Sample configuration | `100000` (100000 scas)                       | `1209600000000000` (2 weeks) | `1209600000000000` (2 weeks) |
 
 |                      | `quorum`                             | `threshold`                          | `veto`                               |
 | -------------------- | ------------------------------------ | ------------------------------------ | ------------------------------------ |

@@ -22,7 +22,7 @@ meta:
 
   - name: "og:image"
 
-    content: https://cronos.crypto.org/og-image.png
+    content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
 
   - name: "twitter:title"
 
@@ -42,7 +42,7 @@ meta:
 
   - name: "twitter:image"
 
-    content: https://cronos.crypto.org/og-image.png
+    content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
 
 canonicalUrl: https://cronos.crypto.org/docs/getting-started/hazlor-mainnet.html
 ---

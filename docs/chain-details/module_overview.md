@@ -11,7 +11,7 @@ meta:
   - name: "og:description"
     content: Learn about the important modules on Hazlor including Bank, Distribution, Governance, Mint, Slashing, Staking, Supply and more.
   - name: "og:image"
-    content: https://cronos.crypto.org/og-image.png
+    content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
   - name: "twitter:title"
     content: Hazlor | Modules
   - name: "twitter:site"
@@ -21,7 +21,7 @@ meta:
   - name: "twitter:description"
     content: Learn about the important modules on Hazlor including Bank, Distribution, Governance, Mint, Slashing, Staking, Supply and more.
   - name: "twitter:image"
-    content: https://cronos.crypto.org/og-image.png
+    content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
 canonicalUrl: https://cronos.crypto.org/docs/chain-details/module_overview.html
 ---
 
@@ -61,13 +61,13 @@ The `bank` module maintains the state of two primary objects:
 
 #### `tx bank send [from_key_or_address] [to_address] [amount] [network_id]` - **Send Funds**
 
-You can transfer of tokens between to a designated address by the `tx bank send` command. For example, we can send 1 basetcro from `address_a` to `address_b` by
+You can transfer of tokens between to a designated address by the `tx bank send` command. For example, we can send 1 basetscas from `address_a` to `address_b` by
 
 ```bash
-$ hazlord tx bank send <address_a> <address_b> 1basetcro --keyring-backend test --chain-id <chain-id>
+$ hazlord tx bank send <address_a> <address_b> 1basetscas --keyring-backend test --chain-id <chain-id>
 
 ## Transaction payload##
-{"body":{"messages":[{"@type":"/cosmos.bank.v1beta1.MsgSend","from_address":<address a>,"to_address":<address b>,"amount":[{"denom":"basetcro","amount":"1"}]}],"memo":"","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[],"fee":{"amount":[],"gas_limit":"200000","payer":"","granter":""}},"signatures":[]}
+{"body":{"messages":[{"@type":"/cosmos.bank.v1beta1.MsgSend","from_address":<address a>,"to_address":<address b>,"amount":[{"denom":"basetscas","amount":"1"}]}],"memo":"","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[],"fee":{"amount":[],"gas_limit":"200000","payer":"","granter":""}},"signatures":[]}
 
 confirm transaction before signing and broadcasting [y/N]: y
 
@@ -86,7 +86,7 @@ $ hazlord query bank balances <address> --output json | jq
     {
     "balances": [
         {
-        "denom": "basetcro",
+        "denom": "basetscas",
         "amount": "[token_balance]"
         }
     ],
@@ -106,7 +106,7 @@ $ hazlord query bank total --output json | jq
     {
     "supply": [
         {
-        "denom": "basetcro",
+        "denom": "basetscas",
         "amount": "[total_supply_amount]"
         }
     ]
@@ -120,7 +120,7 @@ $ hazlord query bank total --output json | jq
 
 | Key                  | Type          | Example                              |
 | -------------------- | ------------- | ------------------------------------ |
-| `SendEnabled`        | []SendEnabled | [{denom: "basetcro", enabled: true }] |
+| `SendEnabled`        | []SendEnabled | [{denom: "basetscas", enabled: true }] |
 | `DefaultSendEnabled` | bool          | true                                 |
 
 ## `distribution`
@@ -149,7 +149,7 @@ There are two main types of rewards
 
 #### Block reward
 
-Block rewards are distributed proportionally to all validators relative to their voting power. This means that even though each validator gains cro with each reward, all validators will maintain equal weight over time.
+Block rewards are distributed proportionally to all validators relative to their voting power. This means that even though each validator gains scas with each reward, all validators will maintain equal weight over time.
 
 For the validator operator, the distribution information is updated if:
 
@@ -386,7 +386,7 @@ $ hazlord query gov params --output json | jq
     "deposit_params": {
       "min_deposit": [
         {
-          "denom": "basetcro",
+          "denom": "basetscas",
           "amount": "10000000"
         }
       ],
@@ -407,7 +407,7 @@ The following tables show overall effects on different configurations of the gov
 | Higher               | Larger window for calculating the downtime  | Longer deposit period        | Longer voting period         |
 | Lower                | Smaller window for calculating the downtime | Shorter deposit period       | Shorter voting period        |
 | Constraints          | Value has to be a positive integer          | Value has to be positive     | Value has to be positive     |
-| Sample configuration | `100000` (100000 cro)                       | `1209600000000000` (2 weeks) | `1209600000000000` (2 weeks) |
+| Sample configuration | `100000` (100000 scas)                       | `1209600000000000` (2 weeks) | `1209600000000000` (2 weeks) |
 
 |                      | `quorum`                             | `threshold`                          | `veto`                               |
 | -------------------- | ------------------------------------ | ------------------------------------ | ------------------------------------ |
@@ -452,7 +452,7 @@ We can query the current minting annual provisions value, for example:
   109573801550200370
 ```
 
-implies that the current minting annual provisions will be `109573801550200370` basetcro ( i.e. `1,095,738,015` cro)
+implies that the current minting annual provisions will be `109573801550200370` basetscas ( i.e. `1,095,738,015` scas)
 
 #### `query mint inflation` - Query the current minting inflation value
 
@@ -473,7 +473,7 @@ We can query the current query parameters by
 $ hazlord query mint params --output json | jq
 
   {
-    "mint_denom": "basetcro",
+    "mint_denom": "basetscas",
     "inflation_rate_change": "0.013000000000000000",
     "inflation_max": "0.020000000000000000",
     "inflation_min": "0.007000000000000000",
@@ -494,7 +494,7 @@ The following tables show overall effects on different configurations of the min
 | Higher               | More expected blocks per year      | Higher target bonding ratio          | N/A          |
 | Lower                | Less expected blocks per year      | Lower target bonding ratio           | N/A          |
 | Constraints          | Value has to be a positive integer | Value has to be less or equal to `1` | N/A          |
-| Sample configuration | `5256000` (5,256,000 blocks)       | `0.66` (66%)                         | `basetcro`    |
+| Sample configuration | `5256000` (5,256,000 blocks)       | `0.66` (66%)                         | `basetscas`    |
 
 |                      | `inflation_max`                       | `inflation_min`                      | `inflation_rate_change`                       |
 | -------------------- | ------------------------------------- | ------------------------------------ | --------------------------------------------- |
@@ -610,7 +610,7 @@ $ hazlord query staking validators -o json | jq
 After the jailing period has passed, one can broadcast a `unjail` transaction to unjail the validator and resume its normal operations by
 
 ```bash
-$ hazlord tx slashing unjail --from node1 --chain-id cronostestnet_338-1
+$ hazlord tx slashing unjail --from node1 --chain-id hazlor_7878-1
   {"body":{"messages":[{"@type":"/cosmos.slashing.v1beta1.MsgUnjail"...}]}
   confirm transaction before signing and broadcasting [y/N]: y
 ```
@@ -770,7 +770,7 @@ $ hazlord query hazlord query staking delegation [delegator-addr] [validator-add
       "shares": "[delegator_shares]"
     },
     "balance": {
-      "denom": "basetcro",
+      "denom": "basetscas",
       "amount": "[delegator_balance]"
     }
   }
@@ -792,7 +792,7 @@ $ hazlord query staking delegations-to [validator-addr] --output json  | jq
           "shares": "[delegator_shares]"
         },
         "balance": {
-          "denom": "basetcro",
+          "denom": "basetscas",
           "amount": "[delegator_balance_1]"
         }
       },
@@ -803,7 +803,7 @@ $ hazlord query staking delegations-to [validator-addr] --output json  | jq
           "shares": "[delegator_shares-2]"
         },
         "balance": {
-          "denom": "basetcro",
+          "denom": "basetscas",
           "amount": "[delegator_balance_2]"
         }
       }
@@ -911,7 +911,7 @@ $ hazlord query staking params --output json | jq
     "max_validators": 100,
     "max_entries": 7,
     "historical_entries": 100,
-    "bond_denom": "basetcro"
+    "bond_denom": "basetscas"
   }
 ```
 
@@ -927,7 +927,7 @@ The following tables show overall effects on different configurations of the sta
 | Higher               | N/A          | More historical entries to persist | More entries for either unbonding delegation or redelegation  |
 | Lower                | N/A          | Less historical entries to persist | Fewer entries for either unbonding delegation or redelegation |
 | Constraints          | N/A          | Value has to be positive           | Value has to be a positive                                    |
-| Sample configuration | `basetcro`    | `100` (50%)                        | `7`                                                           |
+| Sample configuration | `basetscas`    | `100` (50%)                        | `7`                                                           |
 
 ---
 
@@ -959,7 +959,7 @@ $ hazlord query supply total
     {
     "supply": [
         {
-        "denom": "basetcro",
+        "denom": "basetscas",
         "amount": "[total_supply_amount]"
         }
     ]
@@ -975,7 +975,7 @@ $ hazlord query supply total
     {
     "supply": [
         {
-        "denom": "basetcro",
+        "denom": "basetscas",
         "amount": "[total_circulating_amount]"
         }
     ]

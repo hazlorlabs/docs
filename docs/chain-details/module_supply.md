@@ -17,7 +17,7 @@ $ hazlord query supply total
     {
     "supply": [
         {
-        "denom": "basetcro",
+        "denom": "basetscas",
         "amount": "[total_supply_amount]"
         }
     ]
@@ -33,7 +33,7 @@ $ hazlord query supply total
     {
     "supply": [
         {
-        "denom": "basetcro",
+        "denom": "basetscas",
         "amount": "[total_circulating_amount]"
         }
     ]

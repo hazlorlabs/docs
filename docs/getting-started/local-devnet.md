@@ -11,7 +11,7 @@ meta:
   - name: "og:description"
     content: Learn how to compile and run the latest development version of Hazlor testnet from scratch. This page is for building and running the latest development version of the chain for testing purpose only.
   - name: "og:image"
-    content: https://cronos.crypto.org/og-image.png
+    content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
   - name: "twitter:title"
     content: Hazlor | Hazlor EVM Chain | Local Network Deployment
   - name: "twitter:site"
@@ -21,7 +21,7 @@ meta:
   - name: "twitter:description"
     content: Learn how to compile and run the latest development version of Hazlor testnet from scratch. This page is for building and running the latest development version of the chain for testing purpose only.
   - name: "twitter:image"
-    content: https://cronos.crypto.org/og-image.png
+    content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
 canonicalUrl: https://cronos.crypto.org/docs/getting-started/local-devnet.html
 ---
 
@@ -42,7 +42,7 @@ Install the binded version, which install hazlord together, and find it by the a
 
 ```
 git clone https://github.com/hazlorlabs/core
-cd ethermint
+cd core
 make install
 ```
 
@@ -68,7 +68,7 @@ You can customize your devnet based on `ethermint/init.sh`, for example:
 ```yaml
 ### customize the name of your key, the chain-id and moniker of the node ###
   KEY="mykey"
-  CHAINID="ethermint-2"
+  CHAINID="hazlor-2"
   MONIKER="localtestnet"
 .......
 ### specify the default keyring back-backend to be 'test' for convenience ###
@@ -112,7 +112,7 @@ You will be able to list the address with allocated initial funds, for example:
   {
     "name": "mykey",
     "type": "local",
-    "address": "tcrc1cfmydxvlz0a3yeeh4an5ay94lyfv0flw5svzez",
+    "address": "tscas1cfmydxvlz0a3yeeh4an5ay94lyfv0flw5svzez",
     "pubkey": "{\"@type\":\"/ethermint.crypto.v1alpha1.ethsecp256k1.PubKey\",\"key\":\"AssVo7smZ323alb4hq2SIJ/TZw2rJeslZlZK7EGqyC8H\"}"
   }
 ]
@@ -129,7 +129,7 @@ Enter your bip39 mnemonic
 sense slim three rally device lazy slice thumb bridge general essence seven diamond broom scan tell cactus into exotic paddle ignore tape unaware also
 - name: mykey
   type: local
-  address: tcrc1a303tt49l5uhe87yaneyggly83g7e4uncdxqtl
+  address: tscas1a303tt49l5uhe87yaneyggly83g7e4uncdxqtl
   pubkey: '{"@type":"/ethermint.crypto.v1alpha1.ethsecp256k1.PubKey","key":"A9J4ELPAqyyrmypT9CtOVyWrO66eEXum3d8Z2mV7MS6O"}'
   mnemonic: ""
 ```
@@ -139,7 +139,7 @@ sense slim three rally device lazy slice thumb bridge general essence seven diam
 You can check the account balance by
 
 ```
-hazlord q bank balances tcrc14r2pnjm3v8sng8f9y9can4luykrltz36y6vcsp -o json | jq
+hazlord q bank balances tscas14r2pnjm3v8sng8f9y9can4luykrltz36y6vcsp -o json | jq
 ```
 
 For example:
@@ -174,8 +174,8 @@ We can see that there is `99999000000000000000000000` aphoton in this address.
   ```
   - name: Bob
   type: local
-  address: tcrcxwxk09wds0u2k6l39sp0e8ajx3jkw6dm0z5c26
-  pubkey: tcrcpub17weu6qepqwaqek0we9a6ujsnmc3ke3xwkpl68qylcfkazv5tm04y80x004gy2uy3g8p
+  address: tscasxwxk09wds0u2k6l39sp0e8ajx3jkw6dm0z5c26
+  pubkey: tscaspub17weu6qepqwaqek0we9a6ujsnmc3ke3xwkpl68qylcfkazv5tm04y80x004gy2uy3g8p
   mnemonic: ""
   threshold: 0
   pubkeys: []
@@ -187,12 +187,12 @@ We can see that there is `99999000000000000000000000` aphoton in this address.
 - Now we can transfer tokens to `Bob`, for example you can send `1aphoton` to Bob's address by
 
   ```
-  $ hazlord tx bank send mykey tcrc1xwxk09wds0u2k6l39sp0e8ajx3jkw6dm0z5c26 1aphoton --keyring-backend test
+  $ hazlord tx bank send mykey tscas1xwxk09wds0u2k6l39sp0e8ajx3jkw6dm0z5c26 1aphoton --keyring-backend test
   ```
 
 - Lastly, check balance of Bob's address:
   ```
-  $ hazlord query bank balances tcrc1xwxk09wds0u2k6l39sp0e8ajx3jkw6dm0z5c26
+  $ hazlord query bank balances tscas1xwxk09wds0u2k6l39sp0e8ajx3jkw6dm0z5c26
   ```
   and we can see that 1 `aphoton` has already been transferred:
   ```

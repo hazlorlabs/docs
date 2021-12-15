@@ -119,7 +119,7 @@ $ cp ./target/release/tmkms-nitro-helper /usr/local/bin/
 
 #### Step 5.2. Generate a new encrypted validator signing key
 
-`bech32-prefix` is `crocnclconspub` for mainnet and `tcrocnclconspub` for testnet
+`bech32-prefix` is `crocnclconspub` for mainnet and `tscascnclconspub` for testnet
 
 ```bash
 $ tmkms-nitro-helper init -a <KMS_REGION> -k <KMS_KEY_ID> -p bech32 -b <bech32-prefix>
@@ -147,7 +147,7 @@ aws_region = '<AWS region to use for KMS>'
 
 ```toml
 address = 'unix:///home/ec2-user/sockets/validator.socket'
-chain_id = 'cronostestnet_338-1'
+chain_id = 'hazlor_7878-1'
 sealed_consensus_key_path = '/home/ec2-user/.tmkms/secrets/secret.key'
 state_file_path = '/home/ec2-user/.tmkms/state/priv_validator_state.json'
 enclave_config_cid = 15 #overridden by flag

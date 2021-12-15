@@ -2,10 +2,10 @@
 
 ## Node minimum setup
 
-Here we will be using a local `hazlord` folder as the home directory. By default chain data are stored in your home directory `~/.hazlor`. For example, when joining the testnet `cronostestnet_338-1`: 
+Here we will be using a local `hazlord` folder as the home directory. By default chain data are stored in your home directory `~/.hazlor`. For example, when joining the testnet `hazlor_7878-1`: 
 
 ```bash
-./hazlord init mynode --chain-id cronostestnet_338-1 
+./hazlord init mynode --chain-id hazlor_7878-1 
 
 $ sed -i.bak -E 's#^(persistent_peers[[:space:]]+=[[:space:]]+).*$#\1"0d5cf1394a1cfde28dc8f023567222abc0f47534@cronos-seed-0.crypto.org:26656,3032073adc06d710dd512240281637c1bd0c8a7b@cronos-seed-1.crypto.org:26656,04f43116b4c6c70054d9c2b7485383df5b1ed1da@cronos-seed-2.crypto.org:26656"#' ~/.hazlor/config/config.toml
 $ sed -i.bak -E 's#^(create_empty_blocks_interval[[:space:]]+=[[:space:]]+).*$#\1"5s"#' ~/.hazlor/config/config.toml
@@ -98,7 +98,7 @@ There are few clients our team has used before
 - More query examples
 
     ```bash
-    grpcurl -d ' {"validator_addr": "tcrocncl1l74wnswzx4zsmv674tl99h3h3fgj3al2tdzne7"}' -import-path ./grpc/proto -proto ./grpc/proto/cosmos/staking/v1beta1/query.proto -plaintext localhost:9090 cosmos.staking.v1beta1.Query.Validator
+    grpcurl -d ' {"validator_addr": "tscascncl1l74wnswzx4zsmv674tl99h3h3fgj3al2tdzne7"}' -import-path ./grpc/proto -proto ./grpc/proto/cosmos/staking/v1beta1/query.proto -plaintext localhost:9090 cosmos.staking.v1beta1.Query.Validator
     ```
 
 ## Tricks on creating a validator on testnet
@@ -112,15 +112,15 @@ There are few clients our team has used before
     ```bash
     $ ./hazlord tx staking create-validator \
     --from=[name_of_your_key] \
-    --amount=500000tcro \
-    --pubkey=[tcrocnclconspub...]  \
+    --amount=500000tscas \
+    --pubkey=[tscascnclconspub...]  \
     --moniker="[The_id_of_your_node]" \
     --security-contact="[security contact email/contact method]" \
-    --chain-id="cronostestnet_338-1" \
+    --chain-id="hazlor_7878-1" \
     --commission-rate="0.10" \
     --commission-max-rate="0.20" \
     --commission-max-change-rate="0.01" \
     --min-self-delegation="1" \
     --gas="auto" \
-    --gas-price="0.1basetcro"
+    --gas-price="0.1basetscas"
     ```

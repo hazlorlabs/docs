@@ -149,7 +149,7 @@ Before kick-starting your node, we will have to configure the node so that it co
 - In `~/.hazlor/config/app.toml`, update minimum gas price to avoid [transaction spamming](https://github.com/cosmos/cosmos-sdk/issues/4527)
 
   ```bash
-  $ sed -i.bak -E 's#^(minimum-gas-prices[[:space:]]+=[[:space:]]+)""$#\1"0.025basetcro"#' ~/.hazlor/config/app.toml
+  $ sed -i.bak -E 's#^(minimum-gas-prices[[:space:]]+=[[:space:]]+)""$#\1"0.025basetscas"#' ~/.hazlor/config/app.toml
   ```
 
 
@@ -263,7 +263,7 @@ Once the node is synced, we are now ready to send a `create-validator` transacti
 ```
 $ ./hazlord tx staking create-validator \
 --from=[name_of_your_key] \
---amount=[amount of cro, e.g. 1000cro] \
+--amount=[amount of scas, e.g. 1000cro] \
 --pubkey=[crocnclconspub...]  \
 --moniker="[The_id_of_your_node]" \
 --security-contact="[security contact email/contact method]" \
@@ -273,7 +273,7 @@ $ ./hazlord tx staking create-validator \
 --commission-max-change-rate="[The_maximum_change_of_commission_rate_per_day e.g. 0.01 (1%)]" \
 --min-self-delegation="1" \
 --gas 8000000 \
---gas-prices 0.1basetcro
+--gas-prices 0.1basetscas
 
 {"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgCreateValidator"...}
 confirm transaction before signing and broadcasting [y/N]: y
@@ -282,7 +282,7 @@ confirm transaction before signing and broadcasting [y/N]: y
 
 
   ::: tip You will be required to insert the following:
-  - `--from`: The `cro...` address or the key name that holds your funds for initial delegation;
+  - `--from`: The `scas...` address or the key name that holds your funds for initial delegation;
   - `--amount`: The amount of self-delegation provided to the validator as an initial staking;
   - `--pubkey`: The validator public key ( See Step [3-2](#step-3-2-obtain-the-validator-public-key) above ) with **crocnclconspub** as the prefix;
   - `--moniker`: A moniker (name) for your validator node;
@@ -331,7 +331,7 @@ $ ./hazlord query bank balances eth1quw5r22pxy8znjtdkgqc65atrm3x5hg6vycm5n
 
   balances:
   - amount: "10005471622381693"
-    denom: basetcro
+    denom: basetscas
   pagination:
     next_key: null
     total: "0"
@@ -348,7 +348,7 @@ Transfer operation involves the transfer of tokens between two addresses.
 :::details Example: Send 10cro from an address to another.
 
 ```bash
-$ ./hazlord tx bank send Default cro1j7pej8kplem4wt50p4hfvndhuw5jprxxn5625q 10cro --chain-id="crypto-org-chain-mainnet-1" --gas-prices 0.1basetcro
+$ ./hazlord tx bank send Default cro1j7pej8kplem4wt50p4hfvndhuw5jprxxn5625q 10cro --chain-id="crypto-org-chain-mainnet-1" --gas-prices 0.1basetscas
   ## Transaction payload##
   {"body":{"messages":[{"@type":"/cosmos.bank.v1beta1.MsgSend","from_address"....}
 confirm transaction before signing and broadcasting [y/N]: y
@@ -368,7 +368,7 @@ Note that you can look up validators and their operator address by the validator
 ::: details Example: Delegate funds from `Default` to a validator under the operator address `crocncl16k...edcer`
 
 ```bash
-$ ./hazlord tx staking delegate crocncl16kqr009ptgken6qsxnzfnyjfsq6q97g3uedcer 100cro --from Default --chain-id "crypto-org-chain-mainnet-1" --gas-prices 0.1basetcro
+$ ./hazlord tx staking delegate crocncl16kqr009ptgken6qsxnzfnyjfsq6q97g3uedcer 100cro --from Default --chain-id "crypto-org-chain-mainnet-1" --gas-prices 0.1basetscas
 ## Transactions payload##
 {"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgDelegate"....}
 confirm transaction before signing and broadcasting [y/N]: y
@@ -385,7 +385,7 @@ On the other hand, we can create an `Unbond` transaction to unbond the delegated
 ::: details Example: Unbond funds from a validator under the address `crocncl16k...edcer`
 
 ```bash
-$ ./hazlord tx staking unbond crocncl16kqr009ptgken6qsxnzfnyjfsq6q97g3uedcer 100cro --from Default --chain-id "crypto-org-chain-mainnet-1" --gas-prices 0.1basetcro
+$ ./hazlord tx staking unbond crocncl16kqr009ptgken6qsxnzfnyjfsq6q97g3uedcer 100cro --from Default --chain-id "crypto-org-chain-mainnet-1" --gas-prices 0.1basetscas
 ## Transaction payload##
 {"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgUndelegate"...}
 confirm transaction before signing and broadcasting [y/N]: y
@@ -409,10 +409,10 @@ We can check distribution outstanding (un-withdrawn) rewards for a validator and
 ::: details Example: Check all outstanding rewards under the operator address `crocncl1...zrf8`
 
 ```bash
-$ ./hazlord q distribution validator-outstanding-rewards crocncl1kkqxv3szgh099xezt7y38t5anqzue4s326zrf8 --gas-prices 0.1basetcro
+$ ./hazlord q distribution validator-outstanding-rewards crocncl1kkqxv3szgh099xezt7y38t5anqzue4s326zrf8 --gas-prices 0.1basetscas
   rewards:
   - amount: "1920761912.927067330419141688"
-    denom: basetcro
+    denom: basetscas
 ```
 :::
 
@@ -423,7 +423,7 @@ We can check distribution outstanding (un-withdrawn) rewards for a validator and
 ::: details Example: Withdraw all outstanding under a delegation address:
 
 ```bash
-$ ./hazlord tx distribution withdraw-all-rewards --from [key_name] --chain-id crypto-org-chain-mainnet-1 --gas-prices 0.1basetcro
+$ ./hazlord tx distribution withdraw-all-rewards --from [key_name] --chain-id crypto-org-chain-mainnet-1 --gas-prices 0.1basetscas
 
 {"body":{"messages":[{"@type":"/cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward"...}]}
 confirm transaction before signing and broadcasting [y/N]: y
@@ -450,7 +450,7 @@ $ ./hazlord query staking validators -o json | jq
 Where `"jailed": true` implies that the validator has been jailed. After the jailing period has passed, one can broadcast a `unjail` transaction to unjail the validator and resume its normal operations by
 
 ```bash
-$ ./hazlord tx slashing unjail --from [key_name] --chain-id crypto-org-chain-mainnet-1 --gas-prices 0.1basetcro
+$ ./hazlord tx slashing unjail --from [key_name] --chain-id crypto-org-chain-mainnet-1 --gas-prices 0.1basetscas
 
   {"body":{"messages":[{"@type":"/cosmos.slashing.v1beta1.MsgUnjail"...}]}
   confirm transaction before signing and broadcasting [y/N]: y

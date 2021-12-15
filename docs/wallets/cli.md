@@ -11,7 +11,7 @@ meta:
   - name: "og:description"
     content: hazlord is the all-in-one command-line interface. It supports wallet management, funds transfer and staking operations.
   - name: "og:image"
-    content: https://cronos.crypto.org/og-image.png
+    content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
   - name: "twitter:title"
     content: Hazlor | hazlord
   - name: "twitter:site"
@@ -21,7 +21,7 @@ meta:
   - name: "twitter:description"
     content: hazlord is the all-in-one command-line interface. It supports wallet management, funds transfer and staking operations.
   - name: "twitter:image"
-    content: https://cronos.crypto.org/og-image.png
+    content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
 canonicalUrl: https://cronos.crypto.org/docs/wallets/cli.html
 ---
 
@@ -76,13 +76,13 @@ $ hazlord config
 
 We can make changes to the default settings upon our choices, so it allows users to set the configuration beforehand all at once, so it would be ready with the same config afterward.
 
-For example, the `chain-id` can be changed to `cronostestnet_338-1` from a blank name by
+For example, the `chain-id` can be changed to `hazlor_7878-1` from a blank name by
 
 ```
-$ hazlord config "chain-id" cronostestnet_338-1
+$ hazlord config "chain-id" hazlor_7878-1
 $ hazlord config
 {
-	"chain-id": "cronostestnet_338-1",
+	"chain-id": "hazlor_7878-1",
 	"keyring-backend": "os",
 	"output": "text",
 	"node": "tcp://localhost:26657",
@@ -92,7 +92,7 @@ $ hazlord config
 
 Other values can be changed in the same way.
 
-Alternatively, we can directly make the changes to the config values in one place at client.toml. It is under the path of `.ethermint/config/client.toml` in the folder where we installed ethermint:
+Alternatively, we can directly make the changes to the config values in one place at client.toml. It is under the path of `.hazlor/config/client.toml` in the folder where we installed core:
 
 ```
 ############################################################################
@@ -100,7 +100,7 @@ Alternatively, we can directly make the changes to the config values in one plac
 ############################################################################
 
 # The network chain ID
-chain-id = "cronostestnet_338-1"
+chain-id = "hazlor_7878-1"
 # The keyring's backend, where the keys are stored (os|file|kwallet|pass|test|memory)
 keyring-backend = "os"
 # CLI output format (text|json)
@@ -112,12 +112,12 @@ broadcast-mode = "sync"
 ```
 
 After the necessary changes are made in the `client.toml`, then save.
-For example, if we directly change the `chain-id` from `ethermint0` to ethermint-test1, and output to number, it would change instantly as shown below.
+For example, if we directly change the `chain-id` from `hazlor0` to hazlor-test1, and output to number, it would change instantly as shown below.
 
 ```
 $ hazlord config
 {
-	"chain-id": "ethermint-test1",
+	"chain-id": "hazlor-test1",
 	"keyring-backend": "os",
 	"output": "number",
 	"node": "tcp://localhost:26657",
@@ -191,7 +191,7 @@ You can create a new key with the name `Default` as in the following example:
 $ hazlord keys add Default
 - name: Default
   type: local
-  address: tcrc1r4erhyx6jk8nsafhlw7263upnw9hja90gdgj5d
+  address: tscas1r4erhyx6jk8nsafhlw7263upnw9hja90gdgj5d
   pubkey: '{"@type":"/ethermint.crypto.v1alpha1.ethsecp256k1.PubKey","key":"A3EzNez+oPwDnRTY9OWdVDSjOqikiP7zYncTyxil2SgO"}'
   mnemonic: ""
 
@@ -259,7 +259,7 @@ You can retrieve key information by its name:
 $ hazlord keys show mykey --bech acc
 - name: mykey
   type: local
-  address: tcrc1qsklxwt77qrxur494uvw07zjynu03dq9alwh37
+  address: tscas1qsklxwt77qrxur494uvw07zjynu03dq9alwh37
   pubkey: '{"@type":"/ethermint.crypto.v1alpha1.ethsecp256k1.PubKey","key":"A8nbJ3eW9oAb2RNZoS8L71jFMfjk6zVa1UISYgKK9HPm"}'
   mnemonic: ""
 ```
@@ -369,10 +369,10 @@ Transfer operation involves the transfer of tokens between two addresses.
 
 #### **Send Funds** [`tx bank send <from_key_or_address> <to_address> <amount> <network_id>`]
 
-:::details Example: Send 10tcro  from an address to another.
+:::details Example: Send 10tscas  from an address to another.
 
 ```bash
-$ hazlord tx bank send Default tcrc1gjdxrv77zfpq6cywcs8kg6gqyfhl5768ucel6t 10tcro  --chain-id cronostestnet_338-1
+$ hazlord tx bank send Default tscas1gjdxrv77zfpq6cywcs8kg6gqyfhl5768ucel6t 10tscas  --chain-id hazlor_7878-1
   ## Transaction payload##
   {"body":{"messages":[{"@type":"/cosmos.bank.v1beta1.MsgSend","from_address"....}
 confirm transaction before signing and broadcasting [y/N]: y
@@ -391,7 +391,7 @@ To bond funds for staking, you can delegate funds to a validator by the `delegat
 ::: details Example: Delegate funds from `mykey` to a validator under the address `ethvaloper...lq`
 
 ```bash
-$ hazlord tx staking delegate ethvaloper1qsklxwt77qrxur494uvw07zjynu03dq9rdsrlq 100tcro --from mykey --chain-id cronostestnet_338-1
+$ hazlord tx staking delegate ethvaloper1qsklxwt77qrxur494uvw07zjynu03dq9rdsrlq 100tscas --from mykey --chain-id hazlor_7878-1
 ## Transactions payload##
 {"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgDelegate"....}
 confirm transaction before signing and broadcasting [y/N]: y
@@ -406,7 +406,7 @@ On the other hand, we can create a `Unbond` transaction to unbond the delegated 
 ::: details Example: Unbond funds from a validator under the address `ethvaloper...lq`
 
 ```bash
-$ hazlord tx staking unbond ethvaloper1qsklxwt77qrxur494uvw07zjynu03dq9rdsrlq 100tcro --from mykey --chain-id cronostestnet_338-1
+$ hazlord tx staking unbond ethvaloper1qsklxwt77qrxur494uvw07zjynu03dq9rdsrlq 100tscas --from mykey --chain-id hazlor_7878-1
 ## Transaction payload##
 {"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgUndelegate"...}
 confirm transaction before signing and broadcasting [y/N]: y
@@ -428,12 +428,12 @@ You can check your _transferable_ balance with the `balances` command under the 
 :::details Example: Check your address balance
 
 ```bash
-$ hazlord query bank balances tcrc1a303tt49l5uhe87yaneyggly83g7e4uncdxqtl --output json | jq
+$ hazlord query bank balances tscas1a303tt49l5uhe87yaneyggly83g7e4uncdxqtl --output json | jq
 
 {
   "balances": [
     {
-      "denom": "basetcro",
+      "denom": "basetscas",
       "amount": "99999000000000000000000000"
     }
   ],
@@ -464,7 +464,7 @@ $ hazlord tx staking create-validator \
 --amount="100cro" \
 --pubkey='{"@type":...,"key":...}' \
 --moniker="The_new_node" \
---chain-id="cronostestnet_338-1" \
+--chain-id="hazlor_7878-1" \
 --commission-rate="0.10" \
 --commission-max-rate="0.20" \
 --commission-max-change-rate="0.01" \
@@ -499,7 +499,7 @@ $ hazlord query staking validators -o json | jq
 After the jailing period has passed, one can broadcast a `unjail` transaction to unjail the validator and resume its normal operations by
 
 ```bash
-$ hazlord tx slashing unjail --from node1 --chain-id cronostestnet_338-1
+$ hazlord tx slashing unjail --from node1 --chain-id hazlor_7878-1
   {"body":{"messages":[{"@type":"/cosmos.slashing.v1beta1.MsgUnjail"...}]}
   confirm transaction before signing and broadcasting [y/N]: y
 ```

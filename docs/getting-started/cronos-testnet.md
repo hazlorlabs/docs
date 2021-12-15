@@ -11,7 +11,7 @@ meta:
   - name: "og:description"
     content: Learn how to setup a Validator or a full node on Hazlor Hazlor testnet cronostestnet_338-3 in this technical documentation.
   - name: "og:image"
-    content: https://cronos.crypto.org/og-image.png
+    content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
   - name: "twitter:title"
     content: Hazlor | Hazlor EVM Chain | Running Nodes On Testnet
   - name: "twitter:site"
@@ -21,7 +21,7 @@ meta:
   - name: "twitter:description"
     content: Learn how to setup a Validator or a full node on Hazlor Hazlor testnet cronostestnet_338-3 in this technical documentation.
   - name: "twitter:image"
-    content: https://cronos.crypto.org/og-image.png
+    content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
 canonicalUrl: https://cronos.crypto.org/docs/getting-started/cronos-testnet.html
 ---
 
@@ -149,7 +149,7 @@ Before kick-starting your node, we will have to configure your node so that it c
 - In `~/.hazlor/config/app.toml`, update minimum gas price to avoid [transaction spamming](https://github.com/cosmos/cosmos-sdk/issues/4527)
 
   ```bash
-  $ sed -i.bak -E 's#^(minimum-gas-prices[[:space:]]+=[[:space:]]+).*$#\1"5000000000000basetcro"#' ~/.hazlor/config/app.toml
+  $ sed -i.bak -E 's#^(minimum-gas-prices[[:space:]]+=[[:space:]]+).*$#\1"5000000000000basetscas"#' ~/.hazlor/config/app.toml
   ```
 
 - For network configuration, in `~/.hazlor/config/config.toml`, please modify the configurations of `persistent_peers`, `create_empty_blocks_interval` and `timeout_commit` by:
@@ -181,7 +181,7 @@ Run the followings to create a new key. For example, you can create a key with t
   $ ./hazlord keys add Default
 ```
 
-You should obtain an address with `tcrc` prefix, e.g. `tcrc10u5mgfflasrfj9s94mt8l9yucrt2gzhcyt5tsg`. This will be the address for performing transactions.
+You should obtain an address with `tscas` prefix, e.g. `tscas10u5mgfflasrfj9s94mt8l9yucrt2gzhcyt5tsg`. This will be the address for performing transactions.
 
 ### Step 3-2. Obtain test token
 
@@ -190,7 +190,7 @@ Users can the [faucet](https://cronos.crypto.org/faucet) to obtain test tokens, 
 - [Using metamask](./metamask.md#using-metamask); or
 - Using the [address convention tool](./metamask.md#address-conventions).
 
-In case you have reached the daily limit on faucet , you can simply send a message on [Discord](https://discord.gg/pahqHz26q4) #request-tcro channel ,
+In case you have reached the daily limit on faucet , you can simply send a message on [Discord](https://discord.gg/pahqHz26q4) #request-tscas channel ,
 stating who you are and your `0x...` address.
 
 ### Step 3-3. Run everything
@@ -312,7 +312,7 @@ $ ./hazlord tx staking create-validator \
 --commission-max-rate="0.20" \
 --commission-max-change-rate="0.01" \
 --min-self-delegation="1" \
---fees=1000000000000000000basetcro
+--fees=1000000000000000000basetscas
 
 {"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgCreateValidator"...}
 confirm transaction before signing and broadcasting [y/N]: y
@@ -321,7 +321,7 @@ confirm transaction before signing and broadcasting [y/N]: y
 You will be required to insert the following:
 
 
-- `--from`: The `tcrc...` address that holds your `stake` token;
+- `--from`: The `tscas...` address that holds your `stake` token;
 - `--pubkey`: The validator public key( See Step [3-4](#step-3-4-obtain-the-validator-public-key) above )
 - `--moniker`: A moniker (name) for your validator node;
 - `--security-contact`: Security contact email/contact method.
@@ -359,11 +359,11 @@ You can check your _transferable_ balance with the `balances` command under the 
 :::details Example: Check your address balance
 
 ```bash
-$ ./hazlord query bank balances tcrc1qsklxwt77qrxur494uvw07zjynu03dq9alwh37
+$ ./hazlord query bank balances tscas1qsklxwt77qrxur494uvw07zjynu03dq9alwh37
 
 balances:
 - amount: "10005471622381693"
-  denom: basetcro
+  denom: basetscas
 pagination:
   next_key: null
   total: "0"
@@ -383,7 +383,7 @@ Validator could be punished and jailed due to network misbehaviour, we can check
 ```bash
 $ ./hazlord query staking validators -o json | jq
 ................................
-      "operator_address": "tcrcvaloper1hhskvvt87ngxjgl4fkcrn3ts09u63pnh47t06u",
+      "operator_address": "tscasvaloper1hhskvvt87ngxjgl4fkcrn3ts09u63pnh47t06u",
       "consensus_pubkey": {
         "@type": "/cosmos.crypto.ed25519.PubKey",
         "key": "rXphE0lECaU4MfBL70l6tGrfaply4dp79g7ql4ijfco="
@@ -395,7 +395,7 @@ $ ./hazlord query staking validators -o json | jq
 Where `"jailed": true` implies that the validator has been jailed. After the jailing period has passed, one can broadcast a `unjail` transaction to unjail the validator and resume its normal operations by
 
 ```bash
-$ ./hazlord tx slashing unjail --from [key_name] --chain-id "cronostestnet_338-3" --fees=1000000000000000000basetcro
+$ ./hazlord tx slashing unjail --from [key_name] --chain-id "cronostestnet_338-3" --fees=1000000000000000000basetscas
 
   {"body":{"messages":[{"@type":"/cosmos.slashing.v1beta1.MsgUnjail"...}]}
   confirm transaction before signing and broadcasting [y/N]: y

@@ -11,7 +11,7 @@ meta:
   - name: "og:description"
     content: Brief description of all the mentioned network parameters
   - name: "og:image"
-    content: https://cronos.crypto.org/og-image.png
+    content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
   - name: "twitter:title"
     content: Hazlor | List of parameters
   - name: "twitter:site"
@@ -21,7 +21,7 @@ meta:
   - name: "twitter:description"
     content: Brief description of all the mentioned network parameters
   - name: "twitter:image"
-    content: https://cronos.crypto.org/og-image.png
+    content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
 canonicalUrl: https://cronos.crypto.org/docs/chain-details/parameters.html
 ---
 
@@ -95,7 +95,7 @@ This section aims to collect and provide brief a description of all the mentione
 
 | Key                     | Type         | Description                                                              |
 | ----------------------- | ------------ | ------------------------------------------------------------------------ |
-| `evm_denom`             | string       | The token denomination used on the EVM state transitions and gas consumption for EVM messages. The default value is "basetcro"              |
+| `evm_denom`             | string       | The token denomination used on the EVM state transitions and gas consumption for EVM messages. The default value is "basetscas"              |
 | `enable_create`         | bool         | Toggles state transitions that use the `vm.Create` function, and it prevents all contract creation functionality if it is disabled.                |
 | `enable_call`           | bool         | Toggles state transitions that use the `vm.Call` function, and it prevents transfers between accounts and executing a smart contract call if it is disabled                                                |
 | `extra_eips`            | []int        | The set of activateable Ethereum Improvement Proposals (EIPs) on the Ethereum VM Config that apply custom jump tables |

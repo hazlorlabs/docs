@@ -24,7 +24,7 @@ A validator is said to make a byzantine fault when they sign conflicting message
 
 **Chain ID**
 A unique identifier for the blockchain. Different prefixes of the Chain ID are used to distinguish between _mainnet_, _devnet_, and _testnet_. 
-For example, the Chain ID of our [testnet](https://crypto.org/docs/getting-started/cronos-testnet.html) is `cronostestnet_338-1`.
+For example, the Chain ID of our [testnet](https://crypto.org/docs/getting-started/cronos-testnet.html) is `hazlor_7878-1`.
 
 **Chain-abci**
 

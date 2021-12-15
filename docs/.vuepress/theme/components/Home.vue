@@ -4,7 +4,7 @@
       <header class="hero">
         <img
           class="logo"
-          :src="$withBase('https://hazlor.com/wp-content/uploads/2021/11/Logo.png')"
+          :src="$withBase('https://hazlor.com/wp-content/uploads/2021/10/Logo-White.png')"
           alt="logo-icon-white"
         />
         <p class="description">Welcome to</p>
@@ -17,10 +17,10 @@
 
       <div class="introduction">
         <div class="introduction-headline">
-          Testnet is now launched!
+          Testnet is Coming Soon!
         </div>
         <div class="signup-newsletter-text">
-          Sign up to our newsletter to get the latest updates and
+          Connect with us on Discord to get the latest updates and
         </div>
         <div class="introduction-text">
           read the documentation to connect to our Testnet.

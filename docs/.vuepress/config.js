@@ -3,7 +3,7 @@ module.exports = {
   description: "View our latest chain documentation on Hazlor. Sign up to our newsletter to get the latest updates and read the documentation to connect to our Testnet.",
   themeConfig: {
     navbar: true,
-    logo: '/chain_doc_nav_logo.svg',
+    logo: 'https://hazlor.com/wp-content/uploads/2021/10/Logo-White.png',
     nav: [{
         text: "Home",
         link: "/"

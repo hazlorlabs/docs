@@ -24,7 +24,7 @@ There are two main types of rewards
 
 #### Block reward
 
-Block rewards are distributed proportionally to all validators relative to their voting power. This means that even though each validator gains cro with each reward, all validators will maintain equal weight over time.
+Block rewards are distributed proportionally to all validators relative to their voting power. This means that even though each validator gains scas with each reward, all validators will maintain equal weight over time.
 
 For the validator operator, the distribution information is updated if:
 

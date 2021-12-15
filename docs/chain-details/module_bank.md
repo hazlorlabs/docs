@@ -18,13 +18,13 @@ The `bank` module maintains the state of two primary objects:
 
 #### `tx bank send [from_key_or_address] [to_address] [amount] [network_id]` - **Send Funds**
 
-You can transfer of tokens between to a designated address by the `tx bank send` command. For example, we can send 1 basetcro to Bob's address by
+You can transfer of tokens between to a designated address by the `tx bank send` command. For example, we can send 1 basetscas to Bob's address by
 
 ```bash
-$ hazlord tx bank send mykey tcrc1xwxk09wds0u2k6l39sp0e8ajx3jkw6dm0z5c26 1basetcro --keyring-backend test --chain-id ethermint-2
+$ hazlord tx bank send mykey tscas1xwxk09wds0u2k6l39sp0e8ajx3jkw6dm0z5c26 1basetscas --keyring-backend test --chain-id ethermint-2
 
 ## Transaction payload##
-{"body":{"messages":[{"@type":"/cosmos.bank.v1beta1.MsgSend","from_address":<address a>,"to_address":<address b>,"amount":[{"denom":"basetcro","amount":"1"}]}],"memo":"","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[],"fee":{"amount":[],"gas_limit":"200000","payer":"","granter":""}},"signatures":[]}
+{"body":{"messages":[{"@type":"/cosmos.bank.v1beta1.MsgSend","from_address":<address a>,"to_address":<address b>,"amount":[{"denom":"basetscas","amount":"1"}]}],"memo":"","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[],"fee":{"amount":[],"gas_limit":"200000","payer":"","granter":""}},"signatures":[]}
 
 confirm transaction before signing and broadcasting [y/N]: y
 
@@ -39,11 +39,11 @@ confirm transaction before signing and broadcasting [y/N]: y
 One can check the current balance of a specified account by:
 
 ```json
-$ hazlord query bank balances tcrc1a303tt49l5uhe87yaneyggly83g7e4uncdxqtl --output json | jq
+$ hazlord query bank balances tscas1a303tt49l5uhe87yaneyggly83g7e4uncdxqtl --output json | jq
 {
   "balances": [
     {
-      "denom": "basetcro",
+      "denom": "basetscas",
       "amount": "99999000000000000000000000"
     }
   ],
@@ -64,7 +64,7 @@ $ hazlord query bank total --output json | jq
 {
   "supply": [
     {
-      "denom": "basetcro",
+      "denom": "basetscas",
       "amount": "100020217468056427441579571"
     }
   ],
@@ -83,5 +83,5 @@ $ hazlord query bank total --output json | jq
 
 | Key                  | Type          | Example                              |
 | -------------------- | ------------- | ------------------------------------ |
-| `SendEnabled`        | []SendEnabled | [{denom: "basetcro", enabled: true }] |
+| `SendEnabled`        | []SendEnabled | [{denom: "basetscas", enabled: true }] |
 | `DefaultSendEnabled` | bool          | true                                 |

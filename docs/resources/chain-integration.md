@@ -12,7 +12,7 @@
 - [Seeds for fullnode](https://github.com/hazlorlabs/core-testnets/blob/main/testnet.json#L21)
 - Genesis files
   - [Mainnet genesis](https://raw.githubusercontent.com/hazlorlabs/core-mainnet/master/cronosmainnet_25-1/genesis.json)
-  - [Testnet genesis](https://github.com/hazlorlabs/core-testnets/blob/main/cronostestnet_338-1/genesis.json)
+  - [Testnet genesis](https://github.com/hazlorlabs/core-testnets/blob/main/hazlor_7878-1/genesis.json)
 
 ## Setup Guide
 

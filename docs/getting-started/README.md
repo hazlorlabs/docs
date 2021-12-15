@@ -11,7 +11,7 @@ meta:
   - name: "og:description"
     content: Learn how to setup nodes, different SDK modules and our all-in-one command-line interface hazlord in this technical documentation.
   - name: "og:image"
-    content: https://cronos.crypto.org/og-image.png
+    content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
   - name: "twitter:title"
     content: Hazlor | Hazlor EVM Chain | Getting Started
   - name: "twitter:site"
@@ -21,7 +21,7 @@ meta:
   - name: "twitter:description"
     content: Learn how to setup nodes, different SDK modules and our all-in-one command-line interface hazlord in this technical documentation.
   - name: "twitter:image"
-    content: https://cronos.crypto.org/og-image.png
+    content: https://hazlor.com/wp-content/uploads/2021/10/143-1434860_black-blue-abstract-wallpaper-24500-wallpaper-wallpaper-dark.jpg
 canonicalUrl: https://cronos.crypto.org/docs/getting-started/
 ---
 

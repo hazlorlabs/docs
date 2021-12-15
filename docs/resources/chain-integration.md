@@ -347,10 +347,10 @@ The examples also do not include the URL/IP & port combination which must be the
 ## Block Explorer
 
 - Hazlor Mainnet Beta:
-  [https://cronos-explorer.crypto.org/](https://cronos-explorer.crypto.org)
+  [https://cronos-explorer.crypto.org/](https://explorer.hazlor.com)
 - Hazlor Testnet:
   [https://docs.hazlor.com/explorer/testnet3](https://docs.hazlor.com/explorer/testnet3)
 
 ## Community
 
-[Discord](https://discord.gg/cGtxgVfGMZ)
+[Discord](https://discord.gg/X6ZjdB4BEJ)

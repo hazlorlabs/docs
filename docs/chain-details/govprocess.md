@@ -57,8 +57,8 @@ It unlocks the potential for token-holders to vote to approve spending from the 
 You can also choose to submit the proposal in plaintext format.
 
 ### 3. Collect feedback from the community 
-After the proposal is ready, you can post a thread to begin a discussion on the [Hazlor Chain Github Discussions page](https://github.com/crypto-org-chain/chain-main/discussions) to gain initial feedback.
-Engagement is critical to the success of a proposal. The ideal strategy is to engage with experienced people in the community about your idea, to confirm the key points, such as if it makes sense, or if critical flaws exist, etc. You may also plan for a few stages of engagement to get as much as feedback possible before and after submitting a proposal on-chain. Let people in the [Discord community](https://discord.gg/5JTk2ppsY3) know about your draft proposal.
+After the proposal is ready, you can post a thread to begin a discussion on the [Hazlor Chain Github Discussions page](https://github.com/hazlorlabs/core/discussions) to gain initial feedback.
+Engagement is critical to the success of a proposal. The ideal strategy is to engage with experienced people in the community about your idea, to confirm the key points, such as if it makes sense, or if critical flaws exist, etc. You may also plan for a few stages of engagement to get as much as feedback possible before and after submitting a proposal on-chain. Let people in the [Discord community](https://discord.gg/X6ZjdB4BEJ) know about your draft proposal.
 
 ### 4. Revise your proposal
 Depending on the collected feedback, you can revise the proposal accordingly.

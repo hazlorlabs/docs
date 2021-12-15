@@ -57,9 +57,9 @@ Thanks for your interest in Hazlor Chain. In this technical documentation, we ha
 
  <!---TODO: UPDATE LINKS--->
 
-- [Project Website](https://cronos.crypto.org)
+- [Project Website](https://hazlor.com)
 - [Project Repository](https://github.com/hazlorlabs/core)
-- Community chatrooms (non-technical): [Discord](https://discord.gg/nsp9JTC) [Telegram](https://t.me/CryptoComOfficial)
+- Community chatrooms (non-technical): [Discord](https://discord.gg/X6ZjdB4BEJ) [Telegram](https://t.me/CryptoComOfficial)
 - Developer community channel (technical): [![Support Server](https://img.shields.io/discord/783264383978569728.svg?color=7289da&label=Hazlor Chain)](https://discord.gg/pahqHz26q4)
 
  <!---TODO: UPDATE LINKS--->

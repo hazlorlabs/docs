@@ -11,7 +11,7 @@ You can use your [Ledger hardware wallets](https://www.ledger.com/) to securely 
 
 
 ### Technical support and enquiries
-In case you have any enquiry about using Ledger device with desktop wallet, kindly send a message to the Hazlor Chain [Discord](https://discord.gg/pahqHz26q4) #technical-questions channel for assistance.
+In case you have any enquiry about using Ledger device with desktop wallet, kindly send a message to the Hazlor Chain [Discord](https://discord.gg/X6ZjdB4BEJ) #technical-questions channel for assistance.
 
 
 ## Install the Hazlor Chain app on your Ledger device

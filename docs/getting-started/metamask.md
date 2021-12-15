@@ -82,21 +82,21 @@ Note that the address format in Hazlor is in there form of bech32 `tscas...` , w
 $ hazlord keys list --keyring-backend test
   - name: mykey
     type: local
-    address: crc19a6r74dvfxjyvjzf3pg9y3y5rhk6rds2c9265n
+    address: tscas19a6r74dvfxjyvjzf3pg9y3y5rhk6rds2c9265n
     pubkey: '{"@type":"/ethermint.crypto.v1alpha1.ethsecp256k1.PubKey","key":"Azy1tg0wZKRdQ7sd9mICzteCstGThiodZtQqlVT9Amlc"}'
     mnemonic: ""
 
-$ hazlord debug addr crc19a6r74dvfxjyvjzf3pg9y3y5rhk6rds2c9265n
+$ hazlord debug addr tscas19a6r74dvfxjyvjzf3pg9y3y5rhk6rds2c9265n
     Address: [47 116 63 85 172 73 164 70 72 73 136 80 82 68 148 29 237 161 182 10]
     Address (hex): 2F743F55AC49A446484988505244941DEDA1B60A
-    Bech32 Acc: crc19a6r74dvfxjyvjzf3pg9y3y5rhk6rds2c9265n
-    Bech32 Val: crcvaloper19a6r74dvfxjyvjzf3pg9y3y5rhk6rds2ph398y
+    Bech32 Acc: tscas19a6r74dvfxjyvjzf3pg9y3y5rhk6rds2c9265n
+    Bech32 Val: tscasvaloper19a6r74dvfxjyvjzf3pg9y3y5rhk6rds2ph398y
 
 $ hazlord debug addr 2F743F55AC49A446484988505244941DEDA1B60A
   Address: [47 116 63 85 172 73 164 70 72 73 136 80 82 68 148 29 237 161 182 10]
   Address (hex): 2F743F55AC49A446484988505244941DEDA1B60A
-  Bech32 Acc: crc19a6r74dvfxjyvjzf3pg9y3y5rhk6rds2c9265n
-  Bech32 Val: crcvaloper19a6r74dvfxjyvjzf3pg9y3y5rhk6rds2ph398y
+  Bech32 Acc: tscas19a6r74dvfxjyvjzf3pg9y3y5rhk6rds2c9265n
+  Bech32 Val: tscasvaloper19a6r74dvfxjyvjzf3pg9y3y5rhk6rds2ph398y
 ```
 
 ::: tip Remarks:

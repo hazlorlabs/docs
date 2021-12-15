@@ -62,23 +62,23 @@
 
 1. **Tendermint RPC**
 
-   - https://cronos-testnet-3.crypto.org/ or
-   - https://cronos-testnet-3.crypto.org:26657/
+   - https://hatlas.rpc.hazlor.com/ or
+   - https://hatlas.rpc.hazlor.com:26657/
 
 2. **Cosmos RPC**
 
-   - https://cronos-testnet-3.crypto.org:1317/
+   - https://hatlas.rpc.hazlor.com:1317/
 
 3. **gRPC Based**
 
-   - https://cronos-testnet-3.crypto.org:9090/
+   - https://hatlas.rpc.hazlor.com:9090/
 
 4. **EVM HTTP JSON RPC**
 
-   - https://cronos-testnet-3.crypto.org:8545/
+   - https://hatlas.rpc.hazlor.com:8545/
 
 5. **EVM WS JSON RPC**
-   - https://cronos-testnet-3.crypto.org:8546/
+   - https://hatlas.rpc.hazlor.com:8546/
 
 # Ethereum type JSON-RPC Methods
 
@@ -141,7 +141,7 @@ Block Number can be entered as a Hex string, `"earliest"`, `"latest"` or `"pendi
 :::
 :::tip
 While the examples below make use of local node http://localhost:8545, users may also use our public full node:
-https://cronos-testnet-3.crypto.org:8545
+https://hatlas.rpc.hazlor.com:8545
 :::
 
 Below is a list of the RPC methods, the parameters and an example response from the namespaces.

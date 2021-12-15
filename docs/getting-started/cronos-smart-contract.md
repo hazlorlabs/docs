@@ -84,17 +84,17 @@ You can access to [faucet](https://cronos.crypto.org/faucet) and [explorer](http
   
 
 ### Step 6. Endpoints setting
-By default, the script will be using your local host `"127.0.0.1"`  - If you are not running a localhost, you may leverage the public endpoint `https://cronos-testnet-3.crypto.org` by making changes to `networks` in `truffle-config.js`, for example:
+By default, the script will be using your local host `"127.0.0.1"`  - If you are not running a localhost, you may leverage the public endpoint `https://hatlas.rpc.hazlor.com` by making changes to `networks` in `truffle-config.js`, for example:
 
 ```json
   networks: {
     development: {
-     host: "https://cronos-testnet-3.crypto.org",     
+     host: "https://hatlas.rpc.hazlor.com",     
      port: 8545,            
      network_id: "*",       
     },
     cronos: {
-      provider: new HDWalletProvider(getHDWallet(), "https://cronos-testnet-3.crypto.org:8545"), 
+      provider: new HDWalletProvider(getHDWallet(), "https://hatlas.rpc.hazlor.com:8545"), 
       network_id: "*",
       skipDryRun: true
     },
@@ -134,30 +134,30 @@ Correct balance will be shown on Metamask page
   PRIVATE_KEY=XXXXXXX
   ```
 
-### Step 5. Review Migration Script at `scripts/deploy-cronos-token.js`
+### Step 5. Review Migration Script at `scripts/deploy-hazlor-token.js`
   ```javascript
     async function main() {
         const HazlorToken = await hre.ethers.getContractFactory("HazlorToken");
-        const cronosToken = await HazlorToken.deploy("Hazlor Token", "TSCAS", "1000000000000000000000000");
+        const hazlorToken = await HazlorToken.deploy("Hazlor Token", "TSCAS", "1000000000000000000000000");
     
-        await cronosToken.deployed();
+        await hazlorToken.deployed();
     
-        console.log("HazlorToken deployed to:", cronosToken.address);
+        console.log("HazlorToken deployed to:", hazlorToken.address);
     }
   ```
 
 ### Step 6. Endpoints setting
-By default, the script will be using your local host `"127.0.0.1"`  - If you are not running a localhost, you may leverage the public endpoint `https://cronos-testnet-3.crypto.org` by making changes to `networks` in `truffle-config.js`, for example:
+By default, the script will be using your local host `"127.0.0.1"`  - If you are not running a localhost, you may leverage the public endpoint `https://hatlas.rpc.hazlor.com` by making changes to `networks` in `truffle-config.js`, for example:
 
 ```json
   networks: {
     development: {
-     host: "https://cronos-testnet-3.crypto.org",     
+     host: "https://hatlas.rpc.hazlor.com",     
      port: 8545,            
      network_id: "*",       
     },
     cronos: {
-      provider: new HDWalletProvider(getHDWallet(), "https://cronos-testnet-3.crypto.org:8545"), 
+      provider: new HDWalletProvider(getHDWallet(), "https://hatlas.rpc.hazlor.com:8545"), 
       network_id: "*",
       skipDryRun: true
     },

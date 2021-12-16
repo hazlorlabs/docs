@@ -5,7 +5,7 @@
 Here we will be using a local `hazlord` folder as the home directory. By default chain data are stored in your home directory `~/.hazlor`. For example, when joining the testnet `hazlor_7878-1`: 
 
 ```bash
-./hazlord init mynode --chain-id hazlor_7878-1 
+hazlord init mynode --chain-id hazlor_7878-1 
 
 $ sed -i.bak -E 's#^(persistent_peers[[:space:]]+=[[:space:]]+).*$#\1"0d5cf1394a1cfde28dc8f023567222abc0f47534@cronos-seed-0.crypto.org:26656,3032073adc06d710dd512240281637c1bd0c8a7b@cronos-seed-1.crypto.org:26656,04f43116b4c6c70054d9c2b7485383df5b1ed1da@cronos-seed-2.crypto.org:26656"#' ~/.hazlor/config/config.toml
 $ sed -i.bak -E 's#^(create_empty_blocks_interval[[:space:]]+=[[:space:]]+).*$#\1"5s"#' ~/.hazlor/config/config.toml
@@ -43,7 +43,7 @@ address = "0.0.0.0:9090"
 
 Afterward, you should be able to start you node by running 
 ```bash
-./hazlord start 
+hazlord start 
 ````
 where the blockchain data, keys will be stored at the folder `~/.hazlor`
 
@@ -110,7 +110,7 @@ There are few clients our team has used before
     As discussed in the metting, sometimes the `create-valiator` may fail because of the gas. You can use the following command instead (notice we have provide `--gas` and `--gas-price`) 
 
     ```bash
-    $ ./hazlord tx staking create-validator \
+    $ hazlord tx staking create-validator \
     --from=[name_of_your_key] \
     --amount=500000tscas \
     --pubkey=[tscascnclconspub...]  \

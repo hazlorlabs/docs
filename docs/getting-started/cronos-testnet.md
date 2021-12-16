@@ -64,7 +64,7 @@ To simplify the following step, we will be using **Linux** (Intel x86) for illus
   Afterward, you can check the version of `hazlord` by
 
   ```bash
-  $ ./hazlord version
+  $ hazlord version
   0.6.0-testnet
   ```
 
@@ -76,7 +76,7 @@ To simplify the following step, we will be using **Linux** (Intel x86) for illus
 - If you have joined `cronostestnet_338-2` before, you would have to clean up the old blockchain data and start over again, it can be done by running:
 
   ```bash
-  $ ./hazlord unsafe-reset-all
+  $ hazlord unsafe-reset-all
   ```
   and remove the old genesis file by
 
@@ -92,7 +92,7 @@ Before kick-starting your node, we will have to configure your node so that it c
 
 
   ```bash
-    $ ./hazlord init [moniker] --chain-id hazlor_7878-1
+    $ hazlord init [moniker] --chain-id hazlor_7878-1
   ```
 
 
@@ -103,7 +103,7 @@ Before kick-starting your node, we will have to configure your node so that it c
 
 
   ```bash
-    $ ./hazlord init pegasus-node --chain-id hazlor_7878-1
+    $ hazlord init pegasus-node --chain-id hazlor_7878-1
   ```
 
 
@@ -178,7 +178,7 @@ as sentries (see [Tendermint](https://docs.tendermint.com/master/tendermint-core
 Run the followings to create a new key. For example, you can create a key with the name `Default` by:
 
 ```bash
-  $ ./hazlord keys add Default
+  $ hazlord keys add Default
 ```
 
 You should obtain an address with `tscas` prefix, e.g. `tscas10u5mgfflasrfj9s94mt8l9yucrt2gzhcyt5tsg`. This will be the address for performing transactions.
@@ -200,7 +200,7 @@ Once the `hazlord` has been configured, we are ready to start the node and sync 
 - Start hazlord, e.g.:
 
 ```bash
-  $ ./hazlord start
+  $ hazlord start
 ```
 
 ::: tip Remarks:
@@ -258,7 +258,7 @@ It should begin fetching blocks from the other peers. Please wait until it is fu
 - You can query the node syncing status by
 
   ```bash
-  $ ./hazlord status 2>&1 | jq '.SyncInfo.catching_up'
+  $ hazlord status 2>&1 | jq '.SyncInfo.catching_up'
   ```
 
   If the above command returns `false`, It means that your node **is fully synced**; otherwise, it returns `true` and implies your node is still catching up.
@@ -272,7 +272,7 @@ It should begin fetching blocks from the other peers. Please wait until it is fu
   and you can check your node's progress (in terms of block height) by
 
   ```bash
-  $ ./hazlord status 2>&1 | jq '.SyncInfo.latest_block_height'
+  $ hazlord status 2>&1 | jq '.SyncInfo.latest_block_height'
   ```
 
 The next step only applied to the validators, in which, validator hosting is by invitation only at the early stage of the Hazlor testnet.
@@ -284,7 +284,7 @@ The next step only applied to the validators, in which, validator hosting is by 
 You can obtain your validator public key by:
 
 ```bash
-  $ ./hazlord tendermint show-validator
+  $ hazlord tendermint show-validator
 ```
 
 The public key should in a json format, for example:
@@ -301,7 +301,7 @@ The public key should in a json format, for example:
 Once the node is fully synced, we are now ready to send a `create-validator` transaction and join the network, for example:
 
 ```
-$ ./hazlord tx staking create-validator \
+$ hazlord tx staking create-validator \
 --from=[name_of_your_key] \
 --amount=10000000stake \
 --pubkey='{"@type":"/cosmos.crypto.ed25519.PubKey","key":"PUBLIC_KEY"}'  \
@@ -332,9 +332,9 @@ Once the `create-validator` transaction completes, you can check if your validat
 
 ```bash
 
-$ ./hazlord tendermint show-validator
+$ hazlord tendermint show-validator
 ## [{"@type":"/cosmos.crypto.ed25519.PubKey","key":"VALIDATOR_KEY"}] ##
-$ ./hazlord query tendermint-validator-set | grep -c [VALIDATOR_KEY]
+$ hazlord query tendermint-validator-set | grep -c [VALIDATOR_KEY]
 
 ## 1 = Yes; 0 = Not yet added ##
 ```
@@ -359,7 +359,7 @@ You can check your _transferable_ balance with the `balances` command under the 
 :::details Example: Check your address balance
 
 ```bash
-$ ./hazlord query bank balances tscas1qsklxwt77qrxur494uvw07zjynu03dq9alwh37
+$ hazlord query bank balances tscas1qsklxwt77qrxur494uvw07zjynu03dq9alwh37
 
 balances:
 - amount: "10005471622381693"
@@ -381,7 +381,7 @@ pagination:
 Validator could be punished and jailed due to network misbehaviour, we can check the jailing status of a validator, for example:
 
 ```bash
-$ ./hazlord query staking validators -o json | jq
+$ hazlord query staking validators -o json | jq
 ................................
       "operator_address": "tscasvaloper1hhskvvt87ngxjgl4fkcrn3ts09u63pnh47t06u",
       "consensus_pubkey": {
@@ -395,7 +395,7 @@ $ ./hazlord query staking validators -o json | jq
 Where `"jailed": true` implies that the validator has been jailed. After the jailing period has passed, one can broadcast a `unjail` transaction to unjail the validator and resume its normal operations by
 
 ```bash
-$ ./hazlord tx slashing unjail --from [key_name] --chain-id "hazlor_7878-1" --fees=1000000000000000000basetscas
+$ hazlord tx slashing unjail --from [key_name] --chain-id "hazlor_7878-1" --fees=1000000000000000000basetscas
 
   {"body":{"messages":[{"@type":"/cosmos.slashing.v1beta1.MsgUnjail"...}]}
   confirm transaction before signing and broadcasting [y/N]: y

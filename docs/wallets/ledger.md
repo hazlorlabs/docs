@@ -40,7 +40,7 @@ First of all, you will need to install the Hazlor Chain app on your Ledger devic
 1. Open "Hazlor Chain" app on the device
 1. Run in your terminal
     ```bash
-    $ ./hazlord keys add [name] --ledger --keyring-backend=test
+    $ hazlord keys add [name] --ledger --keyring-backend=test
     ```
 
     - `name` is an arbitrary name for your new key
@@ -65,13 +65,13 @@ First of all, you will need to install the Hazlor Chain app on your Ledger devic
 You can query its balance by running in terminal
 
 ```bash
-$ ./hazlord query bank balances [address]
+$ hazlord query bank balances [address]
 ```
 
 `address` is the address you have generated. If you didn't copy your address, you can query the address listing it in terminal:
 
 ```bash
-$ ./hazlord keys list --keyring-backend=test
+$ hazlord keys list --keyring-backend=test
 ```
 
 ## Sign a transaction
@@ -82,7 +82,7 @@ In this tutorial we will send a `MsgSend` transaction securely signed by your Le
 1. Open "Hazlor Chain" app on the device
 1. For example, if you would like to send `1cro` in the mainnet, in your terminal, you can run:
     ```bash
-    $ ./hazlord tx bank send [from-address] [to-address] 1cro --chain-id="crypto-org-chain-mainnet-1" --ledger --keyring-backend=test  --sign-mode=amino-json
+    $ hazlord tx bank send [from-address] [to-address] 1cro --chain-id="crypto-org-chain-mainnet-1" --ledger --keyring-backend=test  --sign-mode=amino-json
     ```
 
     - `from-address` is the from address [generated](#generate-address-with-ledger-device) by your Ledger device
@@ -90,7 +90,7 @@ In this tutorial we will send a `MsgSend` transaction securely signed by your Le
     - In this command, we are sending `1tscas` from the from address, you can specify other amounts you want.
 1. You will be asked to confirm the details of transaction in your terminal, input `y` to confirm:
     ```bash
-    $ ./hazlord tx bank send tscas1tzhdkuc328cgh2hycyfddtdpqfwwu42ywyfvkj tscas1aaah6juc9n6wvkkkr4zdn073n8gt7waha39xsv 1tscas --chain-id=hazlor_7878-1 --ledger --keyring-backend=test  --sign-mode=amino-json
+    $ hazlord tx bank send tscas1tzhdkuc328cgh2hycyfddtdpqfwwu42ywyfvkj tscas1aaah6juc9n6wvkkkr4zdn073n8gt7waha39xsv 1tscas --chain-id=hazlor_7878-1 --ledger --keyring-backend=test  --sign-mode=amino-json
     {"body":{"messages":[{"@type":"/cosmos.bank.v1beta1.MsgSend","from_address":"tscas1tzhdkuc328cgh2hycyfddtdpqfwwu42ywyfvkj","to_address":"tscas1aaah6juc9n6wvkkkr4zdn073n8gt7waha39xsv","amount":[{"denom":"basetscas","amount":"100000000"}]}],"memo":"","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[],"fee":{"amount":[],"gas_limit":"200000","payer":"","granter":""}},"signatures":[]}
 
     confirm transaction before signing and broadcasting [y/N]: y

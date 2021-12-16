@@ -56,7 +56,7 @@ As mention before, in order to run a full node with complete blockchain data, we
 - You can verify the installation by checking the version of the hazlord, the current version is `1.2.1`.
   ```bash
   # check the version of hazlord
-  $ ./hazlord version
+  $ hazlord version
   1.2.1
   ```
 **OR**
@@ -106,7 +106,7 @@ Before kick-starting your node, we will have to configure the node so that it co
 - First of all, you can initialize hazlord by:
 
   ```bash
-    $ ./hazlord init [moniker] --chain-id crypto-org-chain-mainnet-1
+    $ hazlord init [moniker] --chain-id crypto-org-chain-mainnet-1
   ```
 
   - This `moniker` will be the displayed id of your node when connected to Hazlor Chain network.
@@ -166,7 +166,7 @@ Once the `hazlord` has been configured, we are ready to start the node and sync 
 - Start `hazlord`, e.g.:
 
 ```bash
-  $ ./hazlord start
+  $ hazlord start
 ```
 **OR**
 - _(Optional for Linux)_ If you would like to have it running at the background, you can start `hazlord` with `systemd` service, e.g.:
@@ -208,7 +208,7 @@ It should begin fetching blocks from the other peers. Please wait until it is sy
 ::: tip Remarks: 
   - You can query the node syncing status by
     ```bash
-    $ ./hazlord status 2>&1 | jq '.SyncInfo.catching_up'
+    $ hazlord status 2>&1 | jq '.SyncInfo.catching_up'
     ```
 If the above command returns `false`, it means that your node **is synced**; otherwise, it returns `true` and implies your node is still catching up.
 
@@ -260,7 +260,7 @@ You can verify the installation by checking the version of `hazlord`, the latest
 
   ```bash 
   # check the version of hazlord
-  $ ./hazlord version
+  $ hazlord version
   2.0.1
   ```
 
@@ -271,14 +271,14 @@ We are ready to start the node join the network again with the new binary:
 - Start `hazlord`, e.g.:
 
 ```bash
-  $ ./hazlord start
+  $ hazlord start
 ```
 
 You've successfully performed the new binary upgrade! Sit back and wait for the syncing process. 
 
 - You can query the node syncing status by
   ```bash
-  $ ./hazlord status 2>&1 | jq '.SyncInfo.catching_up'
+  $ hazlord status 2>&1 | jq '.SyncInfo.catching_up'
   ```
 If the above command returns `false`, it means that your node **is synced**; otherwise, it returns `true` and implies your node is still catching up.
 
@@ -292,5 +292,5 @@ If the above command returns `false`, it means that your node **is synced**; oth
 and you can check your node's progress (in terms of block height) by:
 
     ```bash
-    $ ./hazlord status 2>&1 | jq '.SyncInfo.latest_block_height'
+    $ hazlord status 2>&1 | jq '.SyncInfo.latest_block_height'
     ```

@@ -62,7 +62,7 @@ There are two options to install `hazlord`:
 - You can verify the installation by checking the version of the hazlord, the current version is `2.0.1`.
   ```bash
   # check the version of hazlord
-  $ ./hazlord version
+  $ hazlord version
   2.0.1
   ```
 **OR**
@@ -112,7 +112,7 @@ Before kick-starting your node, we will have to configure the node so that it co
 - First of all, you can initialize hazlord by:
 
   ```bash
-    $ ./hazlord init [moniker] --chain-id crypto-org-chain-mainnet-1
+    $ hazlord init [moniker] --chain-id crypto-org-chain-mainnet-1
   ```
 
   - This `moniker` will be the displayed id of your node when connected to Hazlor Chain network.
@@ -205,7 +205,7 @@ Once the `hazlord` has been configured, we are ready to start the node and sync 
 - Start `hazlord`, e.g.:
 
 ```bash
-  $ ./hazlord start
+  $ hazlord start
 ```
 **OR**
 - _(Optional for Linux)_ If you would like to have it running at the background, you can start `hazlord` with `systemd` service, e.g.:
@@ -247,7 +247,7 @@ It should begin fetching blocks from the other peers. Please wait until it is sy
 ::: tip Remarks: 
   - You can query the node syncing status by
     ```bash
-    $ ./hazlord status 2>&1 | jq '.SyncInfo.catching_up'
+    $ hazlord status 2>&1 | jq '.SyncInfo.catching_up'
     ```
     If the above command returns `false`, it means that your node **is synced**; otherwise, it returns `true` and implies your node is still catching up.
 
@@ -261,7 +261,7 @@ It should begin fetching blocks from the other peers. Please wait until it is sy
 Once the node is synced, we are now ready to send a `create-validator` transaction and join the network, for example:
 
 ```
-$ ./hazlord tx staking create-validator \
+$ hazlord tx staking create-validator \
 --from=[name_of_your_key] \
 --amount=[amount of scas, e.g. 1000cro] \
 --pubkey=[crocnclconspub...]  \
@@ -299,9 +299,9 @@ confirm transaction before signing and broadcasting [y/N]: y
 Once the `create-validator` transaction completes, you can check if your validator has been added to the validator set:
 
 ```bash
-$ ./hazlord tendermint show-address
+$ hazlord tendermint show-address
 ## [crocnclcons... address] ##
-$ ./hazlord query tendermint-validator-set | grep -c [crocnclcons...]
+$ hazlord query tendermint-validator-set | grep -c [crocnclcons...]
 ## 1 = Yes; 0 = Not yet added ##
 ```
 
@@ -327,7 +327,7 @@ You can check your _transferable_ balance with the `balances` command under the 
 :::details Example: Check your address balance
 
 ```bash
-$ ./hazlord query bank balances eth1quw5r22pxy8znjtdkgqc65atrm3x5hg6vycm5n
+$ hazlord query bank balances eth1quw5r22pxy8znjtdkgqc65atrm3x5hg6vycm5n
 
   balances:
   - amount: "10005471622381693"
@@ -348,7 +348,7 @@ Transfer operation involves the transfer of tokens between two addresses.
 :::details Example: Send 10cro from an address to another.
 
 ```bash
-$ ./hazlord tx bank send Default cro1j7pej8kplem4wt50p4hfvndhuw5jprxxn5625q 10cro --chain-id="crypto-org-chain-mainnet-1" --gas-prices 0.1basetscas
+$ hazlord tx bank send Default cro1j7pej8kplem4wt50p4hfvndhuw5jprxxn5625q 10cro --chain-id="crypto-org-chain-mainnet-1" --gas-prices 0.1basetscas
   ## Transaction payload##
   {"body":{"messages":[{"@type":"/cosmos.bank.v1beta1.MsgSend","from_address"....}
 confirm transaction before signing and broadcasting [y/N]: y
@@ -368,7 +368,7 @@ Note that you can look up validators and their operator address by the validator
 ::: details Example: Delegate funds from `Default` to a validator under the operator address `crocncl16k...edcer`
 
 ```bash
-$ ./hazlord tx staking delegate crocncl16kqr009ptgken6qsxnzfnyjfsq6q97g3uedcer 100cro --from Default --chain-id "crypto-org-chain-mainnet-1" --gas-prices 0.1basetscas
+$ hazlord tx staking delegate crocncl16kqr009ptgken6qsxnzfnyjfsq6q97g3uedcer 100cro --from Default --chain-id "crypto-org-chain-mainnet-1" --gas-prices 0.1basetscas
 ## Transactions payload##
 {"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgDelegate"....}
 confirm transaction before signing and broadcasting [y/N]: y
@@ -385,7 +385,7 @@ On the other hand, we can create an `Unbond` transaction to unbond the delegated
 ::: details Example: Unbond funds from a validator under the address `crocncl16k...edcer`
 
 ```bash
-$ ./hazlord tx staking unbond crocncl16kqr009ptgken6qsxnzfnyjfsq6q97g3uedcer 100cro --from Default --chain-id "crypto-org-chain-mainnet-1" --gas-prices 0.1basetscas
+$ hazlord tx staking unbond crocncl16kqr009ptgken6qsxnzfnyjfsq6q97g3uedcer 100cro --from Default --chain-id "crypto-org-chain-mainnet-1" --gas-prices 0.1basetscas
 ## Transaction payload##
 {"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgUndelegate"...}
 confirm transaction before signing and broadcasting [y/N]: y
@@ -409,7 +409,7 @@ We can check distribution outstanding (un-withdrawn) rewards for a validator and
 ::: details Example: Check all outstanding rewards under the operator address `crocncl1...zrf8`
 
 ```bash
-$ ./hazlord q distribution validator-outstanding-rewards crocncl1kkqxv3szgh099xezt7y38t5anqzue4s326zrf8 --gas-prices 0.1basetscas
+$ hazlord q distribution validator-outstanding-rewards crocncl1kkqxv3szgh099xezt7y38t5anqzue4s326zrf8 --gas-prices 0.1basetscas
   rewards:
   - amount: "1920761912.927067330419141688"
     denom: basetscas
@@ -423,7 +423,7 @@ We can check distribution outstanding (un-withdrawn) rewards for a validator and
 ::: details Example: Withdraw all outstanding under a delegation address:
 
 ```bash
-$ ./hazlord tx distribution withdraw-all-rewards --from [key_name] --chain-id crypto-org-chain-mainnet-1 --gas-prices 0.1basetscas
+$ hazlord tx distribution withdraw-all-rewards --from [key_name] --chain-id crypto-org-chain-mainnet-1 --gas-prices 0.1basetscas
 
 {"body":{"messages":[{"@type":"/cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward"...}]}
 confirm transaction before signing and broadcasting [y/N]: y
@@ -436,7 +436,7 @@ confirm transaction before signing and broadcasting [y/N]: y
 Validator could be punished and jailed due to network misbehaviour, we can check the jailing status of a validator, for example:
 
 ```bash
-$ ./hazlord query staking validators -o json | jq
+$ hazlord query staking validators -o json | jq
 ................................
       "operator_address": "crocncl1hct8ye56gk80qjxvrx299yu9v98aqaxe0y5kvg",
       "consensus_pubkey": {
@@ -450,7 +450,7 @@ $ ./hazlord query staking validators -o json | jq
 Where `"jailed": true` implies that the validator has been jailed. After the jailing period has passed, one can broadcast a `unjail` transaction to unjail the validator and resume its normal operations by
 
 ```bash
-$ ./hazlord tx slashing unjail --from [key_name] --chain-id crypto-org-chain-mainnet-1 --gas-prices 0.1basetscas
+$ hazlord tx slashing unjail --from [key_name] --chain-id crypto-org-chain-mainnet-1 --gas-prices 0.1basetscas
 
   {"body":{"messages":[{"@type":"/cosmos.slashing.v1beta1.MsgUnjail"...}]}
   confirm transaction before signing and broadcasting [y/N]: y

@@ -93,7 +93,7 @@ To simplify the following step, we will be using **Linux** (Intel x86) for illus
 
   ```bash
 
-  $ ./hazlord version
+  $ hazlord version
 
   0.6.1
 
@@ -107,7 +107,7 @@ To simplify the following step, we will be using **Linux** (Intel x86) for illus
 
   ```bash
 
-  $ ./hazlord unsafe-reset-all
+  $ hazlord unsafe-reset-all
 
   ```
 
@@ -127,7 +127,7 @@ Before kick-starting your node, we will have to configure your node so that it c
 
   ```bash
 
-    $ ./hazlord init [moniker] --chain-id cronosmainnet_25-1
+    $ hazlord init [moniker] --chain-id cronosmainnet_25-1
 
   ```
 
@@ -139,7 +139,7 @@ Before kick-starting your node, we will have to configure your node so that it c
 
   ```bash
 
-    $ ./hazlord init pegasus-node --chain-id cronosmainnet_25-1
+    $ hazlord init pegasus-node --chain-id cronosmainnet_25-1
 
   ```
 
@@ -229,7 +229,7 @@ Run the followings to create a new key. For example, you can create a key with t
 
 ```bash
 
-  $ ./hazlord keys add Default
+  $ hazlord keys add Default
 
 ```
 
@@ -244,7 +244,7 @@ Once the `hazlord` has been configured, we are ready to start the node and sync 
 
 ```bash
 
-  $ ./hazlord start
+  $ hazlord start
 
 ```
 
@@ -336,7 +336,7 @@ It should begin fetching blocks from the other peers.
 
   ```bash
 
-  $ ./hazlord status 2>&1 | jq '.SyncInfo.catching_up'
+  $ hazlord status 2>&1 | jq '.SyncInfo.catching_up'
 
   ```
 
@@ -354,7 +354,7 @@ It should begin fetching blocks from the other peers.
 
   ```bash
 
-  $ ./hazlord status 2>&1 | jq '.SyncInfo.latest_block_height'
+  $ hazlord status 2>&1 | jq '.SyncInfo.latest_block_height'
 
   ```
 

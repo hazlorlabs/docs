@@ -148,7 +148,7 @@ For example:
 {
   "balances": [
     {
-      "denom": "aphoton",
+      "denom": "tscas",
       "amount": "99999000000000000000000000"
     }
   ],
@@ -159,7 +159,7 @@ For example:
 }
 ```
 
-We can see that there is `99999000000000000000000000` aphoton in this address.
+We can see that there is `99999000000000000000000000` tscas in this address.
 
 ### Transfer token to another address
 
@@ -194,11 +194,11 @@ We can see that there is `99999000000000000000000000` aphoton in this address.
   ```
   $ hazlord query bank balances tscas1xwxk09wds0u2k6l39sp0e8ajx3jkw6dm0z5c26
   ```
-  and we can see that 1 `aphoton` has already been transferred:
+  and we can see that 1 `tscas` has already been transferred:
   ```
   balances:
   - amount: "1"
-  denom: aphoton
+  denom: tscas
   pagination:
   next_key: null
   total: "0"
